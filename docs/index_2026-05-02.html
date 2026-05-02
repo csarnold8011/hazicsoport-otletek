@@ -1,1109 +1,1464 @@
-
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Házicsoport Ötletek</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Házicsoport ötletek – 2026-05-02</title>
   <meta name="description" content="Heti frissítésű ötletkártyák baptista házicsoport-vezetőknek">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:#FAFAF8; --bg-card:#FFFFFF; --text:#1A1A1A; --text-muted:#666666;
-      --accent:#4A7C59; --accent-lt:#E8F2EC; --border:#E0E0DC;
-      --shadow:0 2px 8px rgba(0,0,0,0.08);
+      --bg:          #F7F4EE;
+      --bg2:         #FFFFFF;
+      --bg3:         #F0EDE5;
+      --bg4:         #E8E4DA;
+      --surface:     #FFFEFB;
+      --border:      rgba(0,0,0,0.08);
+      --border2:     rgba(0,0,0,0.15);
+      --text:        #1C1A16;
+      --text2:       #5C584E;
+      --text3:       #9C9888;
+      --accent:      #2E6B45;
+      --accent2:     #1D4F32;
+      --accent-lt:   #EBF4EF;
+      --accent-pill: rgba(46,107,69,0.10);
+      --gold:        #8A6820;
+      --gold-bg:     #FBF5E6;
+      --radius:      4px;
+      --radius-md:   8px;
+      --radius-lg:   12px;
+      --ff-serif:    'Lora', Georgia, serif;
+      --ff-sans:     'Inter', system-ui, sans-serif;
+      --max-w:       900px;
+      --shadow:      0 1px 4px rgba(0,0,0,0.06);
+      --shadow-lg:   0 4px 24px rgba(0,0,0,0.10);
     }
     [data-theme="dark"] {
-      --bg:#1C1C1E; --bg-card:#2C2C2E; --text:#F2F2F7; --text-muted:#AEAEB2;
-      --accent:#6BBF85; --accent-lt:#1E3328; --border:#3A3A3C;
-      --shadow:0 2px 8px rgba(0,0,0,0.3);
+      --bg:          #141210;
+      --bg2:         #1C1A17;
+      --bg3:         #232018;
+      --bg4:         #2C2920;
+      --surface:     #1C1A17;
+      --border:      rgba(255,255,255,0.07);
+      --border2:     rgba(255,255,255,0.14);
+      --text:        #EDE9E0;
+      --text2:       #A09A8C;
+      --text3:       #6A6458;
+      --accent:      #5DBB7F;
+      --accent2:     #3D9A60;
+      --accent-lt:   rgba(93,187,127,0.10);
+      --accent-pill: rgba(93,187,127,0.12);
+      --gold:        #C9A84C;
+      --gold-bg:     rgba(201,168,76,0.12);
+      --shadow:      0 1px 4px rgba(0,0,0,0.3);
+      --shadow-lg:   0 4px 24px rgba(0,0,0,0.5);
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .2s,color .2s}
-    a{color:var(--accent)} a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-    header{background:var(--accent);color:#fff;padding:1.5rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-    header h1{font-size:1.4rem;font-weight:700} header p{font-size:.9rem;opacity:.88}
-    #theme-toggle{background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.5);color:#fff;border-radius:2rem;padding:.3rem .9rem;cursor:pointer;font-size:.85rem;white-space:nowrap}
-    #theme-toggle:focus-visible{outline:3px solid #fff;outline-offset:2px}
-    #info-panel{max-width:960px;margin:1rem auto 0;padding:0 1rem}
-    #info-panel>summary{cursor:pointer;font-size:.85rem;font-weight:600;color:var(--accent);list-style:none;display:flex;align-items:center;gap:.4rem;user-select:none;background:var(--accent-lt);padding:.6rem 1rem;border-radius:8px}
-    #info-panel>summary::-webkit-details-marker{display:none}
-    #info-panel[open]>summary{border-radius:8px 8px 0 0}
-    #info-panel .info-body{background:var(--bg-card);border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;padding:1rem 1.25rem;font-size:.88rem;line-height:1.7;color:var(--text)}
-    #info-panel .info-body p{margin-bottom:.6rem}
-    #info-panel .info-body ul{padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem;margin-bottom:.6rem}
-    .controls{max-width:960px;margin:1.25rem auto 0;padding:0 1rem;display:flex;flex-direction:column;gap:.6rem}
-    .controls-row{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
-    .controls-label{font-size:.78rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;margin-right:.25rem;white-space:nowrap}
-    .search-box{flex:1;min-width:180px;padding:.35rem .8rem;border:1.5px solid var(--border);border-radius:2rem;background:var(--bg-card);color:var(--text);font-size:.88rem;outline:none}
-    .search-box:focus{border-color:var(--accent)}
-    .filter-btn,.sort-btn{background:var(--bg-card);border:1.5px solid var(--border);color:var(--text);border-radius:2rem;padding:.25rem .8rem;cursor:pointer;font-size:.82rem;transition:all .15s}
-    .filter-btn:hover,.filter-btn.active,.sort-btn:hover,.sort-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-    .filter-btn:focus-visible,.sort-btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-    .card-grid{max-width:960px;margin:1.5rem auto 3rem;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
-    .card{background:var(--bg-card);border:1px solid var(--border);border-top:3px solid var(--accent);border-radius:12px;box-shadow:var(--shadow);padding:1.25rem;display:flex;flex-direction:column;gap:.75rem;transition:box-shadow .15s}
-    .card:hover{box-shadow:0 4px 16px rgba(0,0,0,.12)}
-    .card-meta{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
-    .tag{background:var(--accent-lt);color:var(--accent);border-radius:1rem;padding:.15rem .6rem;font-size:.75rem;font-weight:600}
-    .qa-score{background:var(--accent);color:#fff;border-radius:1rem;padding:.15rem .6rem;font-size:.75rem;font-weight:700;margin-left:auto}
-    .card-source{display:flex;gap:1rem;font-size:.76rem;color:var(--text-muted);flex-wrap:wrap}
-    .card h2{font-size:1.05rem;font-weight:700;line-height:1.35}
-    .ige-box{background:var(--accent-lt);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:.75rem 1rem}
-    .ige-hely{font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:.3rem}
-    .ige-szoveg{font-size:.9rem;font-style:italic;color:var(--text);line-height:1.5}
-    details{border-top:1px solid var(--border);padding-top:.5rem}
-    summary{cursor:pointer;font-size:.82rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.04em;list-style:none;display:flex;align-items:center;gap:.4rem;padding:.25rem 0;user-select:none}
-    summary::-webkit-details-marker{display:none}
-    summary::before{content:"▶";font-size:.65rem;transition:transform .2s}
-    details[open] summary::before{transform:rotate(90deg)}
-    #info-panel>summary::before{content:none}
-    summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:3px}
-    .section-body{padding:.6rem 0 .25rem;font-size:.9rem}
-    .section-body p{color:var(--text);margin-bottom:.4rem}
-    .q-list{list-style:none;display:flex;flex-direction:column;gap:.5rem}
-    .q-list li{padding:.5rem .75rem;background:var(--accent-lt);border-radius:8px;font-size:.88rem;line-height:1.4}
-    .v-list{list-style:disc;padding-left:1.2rem;display:flex;flex-direction:column;gap:.3rem}
-    .v-list li{font-size:.88rem;color:var(--text)}
-    .qa-details summary{color:var(--text-muted);font-size:.78rem;text-transform:none;letter-spacing:0}
-    .qa-grid{display:flex;flex-direction:column;gap:.45rem;padding-top:.4rem}
-    .qa-item{display:grid;grid-template-columns:1fr 2fr auto;align-items:center;gap:.5rem}
-    .qa-label{font-size:.76rem;color:var(--text-muted)}
-    .qa-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden}
-    .qa-fill{display:block;height:100%;background:var(--accent);border-radius:3px}
-    .qa-num{font-size:.76rem;font-weight:700;color:var(--accent);min-width:1.5rem;text-align:right}
-    .forras-link{font-size:.78rem;color:var(--text-muted)}
-    .empty-state{grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--text-muted)}
-    footer{text-align:center;padding:1.5rem;font-size:.8rem;color:var(--text-muted);border-top:1px solid var(--border)}
-    @media print{
-      header,.controls,#info-panel{display:none}
-      .card{break-inside:avoid;box-shadow:none;border:1px solid #ccc}
-      details{display:block} details>div{display:block!important}
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+    html { scroll-behavior:smooth }
+    body {
+      font-family: var(--ff-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .masthead {
+      border-bottom: 2px solid var(--text);
+      padding: 1.5rem 1.5rem 1rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .masthead-top {
+      display: flex; align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.3rem;
+      gap: 1rem;
+    }
+    .masthead-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--text);
+    }
+    .masthead-title em { font-style: italic; color: var(--accent); }
+    .masthead-actions { display:flex; gap:0.5rem; align-items:center; flex-shrink:0 }
+    .btn-ghost {
+      background: none;
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      border-radius: var(--radius);
+      padding: 0.3rem 0.7rem;
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { background: var(--bg3); color: var(--text) }
+    .masthead-meta {
+      font-size: 0.75rem;
+      color: var(--text3);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .masthead-meta span { display:flex; align-items:center; gap:0.3rem }
+    .archive-row {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.6rem 1.5rem;
+      display: flex; gap: 0.5rem; align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .archive-lbl {
+      font-size: 0.68rem; text-transform: uppercase;
+      letter-spacing: 0.06em; color: var(--text3);
+      white-space: nowrap;
+    }
+    .archive-link {
+      font-size: 0.75rem; color: var(--text2);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border2);
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .archive-link:hover { color: var(--accent); border-color: var(--accent) }
+    .controls {
+      max-width: var(--max-w);
+      margin: 1.25rem auto 0;
+      padding: 0 1.5rem;
+    }
+    .search-row {
+      display: flex; gap: 0.5rem; align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .search-wrap { position:relative; flex:1; max-width:320px }
+    .search-wrap svg {
+      position:absolute; left:9px; top:50%; transform:translateY(-50%);
+      width:13px; height:13px; color:var(--text3); pointer-events:none;
+    }
+    .search-box {
+      width:100%;
+      padding: 0.38rem 0.75rem 0.38rem 1.9rem;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: var(--ff-sans);
+      font-size: 0.82rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    .search-box:focus { border-color: var(--accent) }
+    .filter-row { display:flex; flex-wrap:wrap; gap:0.35rem; margin-bottom:0.4rem }
+    .filter-lbl {
+      font-size: 0.65rem; text-transform: uppercase; letter-spacing:0.06em;
+      color: var(--text3); align-self:center; margin-right:0.2rem;
+      white-space:nowrap;
+    }
+    .chip {
+      font-family: var(--ff-sans);
+      font-size: 0.75rem;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      color: var(--text2);
+      border-radius: var(--radius);
+      padding: 0.2rem 0.6rem;
+      cursor: pointer;
+      transition: all 0.12s;
+      white-space: nowrap;
+    }
+    .chip:hover { background:var(--bg3); color:var(--text) }
+    .chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      max-width: var(--max-w);
+      margin: 1rem auto 0;
+    }
+    .layout {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 5rem;
+    }
+    .visible-note { font-size: 0.72rem; color: var(--text3); margin-bottom: 1.25rem; }
+    #visible-count { color: var(--text2); font-weight:500 }
+    .featured {
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+      animation: fadeIn 0.4s ease both;
+    }
+    .featured-label {
+      font-size: 0.65rem; font-weight:500;
+      text-transform: uppercase; letter-spacing:0.08em;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+      display: flex; align-items:center; gap:0.4rem;
+    }
+    .featured-label::after { content:''; flex:1; height:1px; background:var(--accent-lt); }
+    .featured-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+    .featured-meta {
+      font-size: 0.72rem; color: var(--text3);
+      display:flex; gap:1rem; flex-wrap:wrap;
+      margin-bottom: 1rem;
+    }
+    .featured-intro {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      color: var(--text2);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+    .featured-body { display:grid; grid-template-columns: 1fr 1fr; gap:1.25rem }
+    @media (max-width:600px) { .featured-body { grid-template-columns:1fr } }
+    .feat-section-title {
+      font-size: 0.65rem; font-weight:500;
+      text-transform:uppercase; letter-spacing:0.07em;
+      color: var(--text3);
+      margin-bottom: 0.5rem;
+    }
+    .feat-tags { display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:1rem }
+    .tag {
+      font-size: 0.68rem; font-weight:500;
+      background: var(--accent-lt);
+      color: var(--accent2);
+      border-radius: var(--radius);
+      padding: 0.15rem 0.5rem;
+    }
+    .score-pill {
+      font-size: 0.68rem; font-weight:500;
+      background: var(--gold-bg);
+      color: var(--gold);
+      border-radius: var(--radius);
+      padding: 0.15rem 0.5rem;
+    }
+    .ige-box {
+      background: var(--accent-lt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: 0.85rem 1rem;
+      margin: 0.75rem 0;
+    }
+    .ige-ref {
+      font-size: 0.68rem; font-weight:500;
+      text-transform:uppercase; letter-spacing:0.06em;
+      color: var(--accent); margin-bottom:0.3rem;
+    }
+    .ige-text {
+      font-family: var(--ff-serif);
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      display: flex; flex-direction:column;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s, transform 0.2s;
+      animation: fadeIn 0.35s ease both;
+      overflow: hidden;
+    }
+    .card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(8px) }
+      to   { opacity:1; transform:translateY(0) }
+    }
+    .card-header { padding: 1rem 1rem 0.75rem; border-bottom: 1px solid var(--border); }
+    .card-tags { display:flex; flex-wrap:wrap; gap:0.3rem; margin-bottom:0.5rem; align-items:center }
+    .card-title {
+      font-family: var(--ff-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--text);
+    }
+    .card-meta-row { font-size: 0.7rem; color: var(--text3); margin-top: 0.3rem; display:flex; gap:0.75rem; }
+    .card-body { padding:0.75rem 1rem; flex:1; display:flex; flex-direction:column }
+    details { border-top: 1px solid var(--border) }
+    details:first-child { border-top:none }
+    summary {
+      list-style:none; cursor:pointer;
+      display:flex; align-items:center; gap:0.35rem;
+      padding: 0.5rem 0;
+      font-size: 0.68rem; font-weight:500;
+      text-transform:uppercase; letter-spacing:0.06em;
+      color: var(--text3);
+      user-select:none;
+      transition: color 0.12s;
+    }
+    summary::-webkit-details-marker { display:none }
+    summary:hover { color: var(--accent) }
+    .arr { width:12px; height:12px; flex-shrink:0; transition: transform 0.18s; }
+    details[open] .arr { transform:rotate(90deg) }
+    details[open] summary { color: var(--accent) }
+    .sec-body { padding-bottom: 0.65rem }
+    .prose { font-size:0.85rem; color:var(--text2); line-height:1.65 }
+    .q-list { list-style:none; display:flex; flex-direction:column; gap:0.35rem }
+    .q-list li {
+      font-size:0.83rem; color:var(--text);
+      background:var(--bg3);
+      border-left: 2px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 0.4rem 0.65rem;
+      line-height:1.45;
+    }
+    .v-list { list-style:none; display:flex; flex-direction:column; gap:0.25rem }
+    .v-list li { font-size:0.83rem; color:var(--text2); padding-left: 0.9rem; position:relative; line-height:1.45; }
+    .v-list li::before { content:''; position:absolute; left:0; top:0.55em; width:4px; height:4px; background:var(--accent); border-radius:50%; }
+    .qa-grid { display:flex; flex-direction:column; gap:0.35rem; padding-top:0.2rem }
+    .qa-row { display:grid; grid-template-columns:1fr 2fr 22px; align-items:center; gap:0.4rem }
+    .qa-lbl { font-size:0.68rem; color:var(--text3) }
+    .qa-track { height:3px; background:var(--bg4); border-radius:2px; overflow:hidden }
+    .qa-fill { height:100%; background:var(--accent); border-radius:2px }
+    .qa-num { font-size:0.68rem; font-weight:500; color:var(--accent); text-align:right }
+    .card-foot {
+      padding: 0.5rem 1rem;
+      border-top: 1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .src-link { font-size:0.72rem; color:var(--text3); text-decoration:none; display:flex; align-items:center; gap:0.2rem; transition: color 0.12s; }
+    .src-link:hover { color:var(--accent) }
+    .lekt { font-size:0.65rem; color:var(--text3) }
+    .empty-state { grid-column:1/-1; text-align:center; padding:4rem 1rem; color:var(--text3); }
+    .empty-state p { font-size:0.9rem; margin-top:0.5rem }
+    .info-wrap { max-width:var(--max-w); margin:0.75rem auto 0; padding:0 1.5rem; }
+    .info-toggle { font-size:0.72rem; color:var(--text3); background:none; border:none; cursor:pointer; font-family:var(--ff-sans); padding:0; display:flex; align-items:center; gap:0.3rem; transition:color 0.12s; }
+    .info-toggle:hover { color:var(--text2) }
+    .info-panel { display:none; margin-top:0.5rem; background:var(--bg2); border:1px solid var(--border); border-radius:var(--radius-md); padding:0.85rem 1rem; font-size:0.8rem; color:var(--text2); line-height:1.65; }
+    .info-panel.open { display:block }
+    .info-panel p { margin-bottom:0.35rem }
+    .info-panel a { color:var(--accent) }
+    footer { max-width:var(--max-w); margin:0 auto; padding: 1.25rem 1.5rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.72rem; color:var(--text3); }
+    footer a { color:var(--text3); text-decoration:none }
+    footer a:hover { color:var(--accent) }
+    @media print {
+      .masthead-actions,.controls,.info-wrap,footer { display:none }
+      .card,.featured { break-inside:avoid; box-shadow:none; animation:none }
+      details { display:block }
     }
   </style>
 </head>
 <body>
 
-<header role="banner">
-  <div>
-    <h1>&#127968; Házicsoport Ötletek</h1>
-    <p>Heti frissítés &middot; 2026. 05. 02. &middot; 9 kártya</p>
+<div class="masthead">
+  <div class="masthead-top">
+    <h1 class="masthead-title">Házicsoport <em>Ötletek</em></h1>
+    <div class="masthead-actions">
+      <button class="btn-ghost" id="theme-btn" onclick="toggleTheme()">&#9790; Sötét</button>
+    </div>
   </div>
-  <button id="theme-toggle" aria-label="Téma váltása" onclick="toggleTheme()">&#127769; Sötét</button>
-</header>
+  <div class="masthead-meta">
+    <span>&#128197; 2026. 05. 02.</span>
+    <span>&#128196; 9 kártya</span>
+    <span>&#127760; Heti frissítés</span>
+  </div>
+</div>
 
 
+<div class="archive-row">
+  <span class="archive-lbl">Korábbi hetek</span>
+  
+  <a class="archive-link" href="https://csarnold8011.github.io/hazicsoport-otletek/index_2026-05-02.html" target="_blank" rel="noopener">2026-05-02</a>
+  
+</div>
 
-<details id="info-panel">
-  <summary>&#8505;&#65039; Hogyan használd ezt az oldalt?</summary>
-  <div class="info-body">
-    <p><strong>Ez az oldal mesterséges intelligencia segítségével készül</strong>,
-    keresztény angol nyelvű forrásokból (The Gospel Coalition, Christianity Today,
-    Relevant Magazine és más megbízható oldalak) válogatott, hetente frissülő
-    házicsoport-ötlettár.</p>
-    <p><strong>&#9888;&#65039; Fontos:</strong> Az AI-tartalom emberi ellenőrzést és kiegészítést igényel.
-    Ez az oldal nem a felkészülési időt akarja pótolni, hanem ötleteket,
-    indítópontokat és ihletet szeretne adni a házicsoport-vezetőknek.</p>
-    <p><strong>Hogyan használd:</strong></p>
-    <ul>
-      <li>A <strong>kártyákon belül a szekciók lenyithatók és becsukhatók</strong> –
-          kattints a fejlécükre (Bevezető, Vázlatpontok, Kérdések stb.)</li>
-      <li>A <strong>téma-, forrás- és rendezésszűrők</strong> segítségével
-          szűkítheted a megjelenített kártyákat</li>
-      <li>A <strong>keresőmező</strong> cím és tartalom alapján keres</li>
-      <li>A kártyák alján lévő <strong>„Eredeti forrás"</strong> linkre kattintva
-          megnyithatod az eredeti angol cikket</li>
-      <li>A <strong>minőségi szempontok</strong> szekció mutatja az AI önértékelését –
-          alacsony pontszámnál különösen érdemes saját szemmel is átnézni a tartalmat</li>
-      <li>A jobb felső sarokban válthatsz <strong>világos/sötét mód</strong> között</li>
-    </ul>
-    <p style="font-size:.8rem;color:var(--text-muted)">Készül: Claude (Anthropic) AI &middot;
-    Forrás: RSS feedek &middot;
-    Repo: <a href="https://github.com/csarnold8011/hazicsoport-otletek">GitHub</a></p>
-  </div>
-</details>
 
-<nav class="controls" aria-label="Vezérlők">
-  <div class="controls-row">
-    <span class="controls-label">Keresés:</span>
-    <input class="search-box" type="search" placeholder="Keress címre, témára..."
-      oninput="applyAll()" id="search-box" aria-label="Keresés">
+<div class="info-wrap">
+  <button class="info-toggle" onclick="toggleInfo()">
+    &#9432; Hogyan működik ez az oldal?
+  </button>
+  <div class="info-panel" id="info-panel">
+    <p><strong>Mesterséges intelligencia segítségével</strong> készül, keresztény angol forrásokból válogatva (The Gospel Coalition, Christianity Today és mások). Hetente frissül.</p>
+    <p>&#9888; Az AI-tartalom emberi ellenőrzést igényel – ötletindítónak, nem kész felkészülési anyagnak szánjuk.</p>
+    <p>A kártyák szekciói lenyithatók. Az &#9733; szám az AI önértékelési pontszáma. Forrás: <a href="https://github.com/csarnold8011/hazicsoport-otletek">GitHub</a></p>
   </div>
-  <div class="controls-row">
-    <span class="controls-label">Téma:</span>
-    <button class="filter-btn active" onclick="filterTag('mind')" aria-pressed="true">Mind</button>
-    
-    <button class="filter-btn" onclick="filterTag('Bibliaolvasás')" aria-pressed="false">Bibliaolvasás</button>
-    
-    <button class="filter-btn" onclick="filterTag('Isten jósága')" aria-pressed="false">Isten jósága</button>
-    
-    <button class="filter-btn" onclick="filterTag('barátság')" aria-pressed="false">barátság</button>
-    
-    <button class="filter-btn" onclick="filterTag('bibliaolvasás')" aria-pressed="false">bibliaolvasás</button>
-    
-    <button class="filter-btn" onclick="filterTag('bizalom')" aria-pressed="false">bizalom</button>
-    
-    <button class="filter-btn" onclick="filterTag('bátorság')" aria-pressed="false">bátorság</button>
-    
-    <button class="filter-btn" onclick="filterTag('bűnbánat')" aria-pressed="false">bűnbánat</button>
-    
-    <button class="filter-btn" onclick="filterTag('evangelizáció')" aria-pressed="false">evangelizáció</button>
-    
-    <button class="filter-btn" onclick="filterTag('félelem')" aria-pressed="false">félelem</button>
-    
-    <button class="filter-btn" onclick="filterTag('férfiak')" aria-pressed="false">férfiak</button>
-    
-    <button class="filter-btn" onclick="filterTag('hit válságban')" aria-pressed="false">hit válságban</button>
-    
-    <button class="filter-btn" onclick="filterTag('ima')" aria-pressed="false">ima</button>
-    
-    <button class="filter-btn" onclick="filterTag('kétség és hit')" aria-pressed="false">kétség és hit</button>
-    
-    <button class="filter-btn" onclick="filterTag('közösség')" aria-pressed="false">közösség</button>
-    
-    <button class="filter-btn" onclick="filterTag('közösségi élet')" aria-pressed="false">közösségi élet</button>
-    
-    <button class="filter-btn" onclick="filterTag('lelki növekedés')" aria-pressed="false">lelki növekedés</button>
-    
-    <button class="filter-btn" onclick="filterTag('lelki táplálék')" aria-pressed="false">lelki táplálék</button>
-    
-    <button class="filter-btn" onclick="filterTag('lelki élet')" aria-pressed="false">lelki élet</button>
-    
-    <button class="filter-btn" onclick="filterTag('lelki út')" aria-pressed="false">lelki út</button>
-    
-    <button class="filter-btn" onclick="filterTag('magány')" aria-pressed="false">magány</button>
-    
-    <button class="filter-btn" onclick="filterTag('megtérés')" aria-pressed="false">megtérés</button>
-    
-    <button class="filter-btn" onclick="filterTag('megújulás')" aria-pressed="false">megújulás</button>
-    
-    <button class="filter-btn" onclick="filterTag('remény')" aria-pressed="false">remény</button>
-    
-    <button class="filter-btn" onclick="filterTag('személyes hit')" aria-pressed="false">személyes hit</button>
-    
-    <button class="filter-btn" onclick="filterTag('személyes hitélet')" aria-pressed="false">személyes hitélet</button>
-    
-    <button class="filter-btn" onclick="filterTag('szenvedés')" aria-pressed="false">szenvedés</button>
-    
-    <button class="filter-btn" onclick="filterTag('szokások')" aria-pressed="false">szokások</button>
-    
-    <button class="filter-btn" onclick="filterTag('tanulás')" aria-pressed="false">tanulás</button>
-    
-    <button class="filter-btn" onclick="filterTag('vágy Isten után')" aria-pressed="false">vágy Isten után</button>
-    
-    <button class="filter-btn" onclick="filterTag('válás')" aria-pressed="false">válás</button>
-    
-    <button class="filter-btn" onclick="filterTag('őszinteség')" aria-pressed="false">őszinteség</button>
-    
-  </div>
-  <div class="controls-row">
-    <span class="controls-label">Forrás:</span>
-    <button class="filter-btn active" onclick="filterSource('mind')" aria-pressed="true">Mind</button>
-    
-    <button class="filter-btn" onclick="filterSource('Crossway')" aria-pressed="false">Crossway</button>
-    
-    <button class="filter-btn" onclick="filterSource('Magyarországi Baptista Egyház')" aria-pressed="false">Magyarországi Baptista Egyház</button>
-    
-    <button class="filter-btn" onclick="filterSource('Relevant Magazine')" aria-pressed="false">Relevant Magazine</button>
-    
-    <button class="filter-btn" onclick="filterSource('The Gospel Coalition')" aria-pressed="false">The Gospel Coalition</button>
-    
-  </div>
-  <div class="controls-row">
-    <span class="controls-label">Rendezés:</span>
-    <button class="sort-btn active" id="sort-score" onclick="sortCards('score')" aria-pressed="true">&#9733; Pontszám</button>
-    <button class="sort-btn" id="sort-date" onclick="sortCards('date')" aria-pressed="false">&#128197; Dátum</button>
-  </div>
-</nav>
+</div>
 
-<main id="card-grid" class="card-grid" aria-label="Kártyák">
+<div class="controls">
+  <div class="search-row">
+    <div class="search-wrap">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="6.5" cy="6.5" r="4.5"/><line x1="10.5" y1="10.5" x2="14" y2="14"/>
+      </svg>
+      <input class="search-box" type="search" id="search" placeholder="Keresés…" oninput="applyAll()" aria-label="Keresés">
+    </div>
+    <button class="btn-ghost" id="sort-score" onclick="setSort('score')">&#9733; Pontszám</button>
+    <button class="btn-ghost" id="sort-date" onclick="setSort('date')">&#128197; Dátum</button>
+  </div>
+  <div class="filter-row" id="tag-row">
+    <span class="filter-lbl">Téma</span>
+    <button class="chip active" onclick="setTag('mind')" data-tag="mind">Összes</button>
+    
+    <button class="chip" onclick="setTag('Bibliaolvasás')" data-tag="Bibliaolvasás">Bibliaolvasás</button>
+    
+    <button class="chip" onclick="setTag('Isten jósága')" data-tag="Isten jósága">Isten jósága</button>
+    
+    <button class="chip" onclick="setTag('barátság')" data-tag="barátság">barátság</button>
+    
+    <button class="chip" onclick="setTag('bibliaolvasás')" data-tag="bibliaolvasás">bibliaolvasás</button>
+    
+    <button class="chip" onclick="setTag('bizalom')" data-tag="bizalom">bizalom</button>
+    
+    <button class="chip" onclick="setTag('bátorság')" data-tag="bátorság">bátorság</button>
+    
+    <button class="chip" onclick="setTag('bűnbánat')" data-tag="bűnbánat">bűnbánat</button>
+    
+    <button class="chip" onclick="setTag('evangelizáció')" data-tag="evangelizáció">evangelizáció</button>
+    
+    <button class="chip" onclick="setTag('félelem')" data-tag="félelem">félelem</button>
+    
+    <button class="chip" onclick="setTag('férfiak')" data-tag="férfiak">férfiak</button>
+    
+    <button class="chip" onclick="setTag('hit válságban')" data-tag="hit válságban">hit válságban</button>
+    
+    <button class="chip" onclick="setTag('ima')" data-tag="ima">ima</button>
+    
+    <button class="chip" onclick="setTag('kétség és hit')" data-tag="kétség és hit">kétség és hit</button>
+    
+    <button class="chip" onclick="setTag('közösség')" data-tag="közösség">közösség</button>
+    
+    <button class="chip" onclick="setTag('közösségi élet')" data-tag="közösségi élet">közösségi élet</button>
+    
+    <button class="chip" onclick="setTag('lelki növekedés')" data-tag="lelki növekedés">lelki növekedés</button>
+    
+    <button class="chip" onclick="setTag('lelki táplálék')" data-tag="lelki táplálék">lelki táplálék</button>
+    
+    <button class="chip" onclick="setTag('lelki élet')" data-tag="lelki élet">lelki élet</button>
+    
+    <button class="chip" onclick="setTag('lelki út')" data-tag="lelki út">lelki út</button>
+    
+    <button class="chip" onclick="setTag('magány')" data-tag="magány">magány</button>
+    
+    <button class="chip" onclick="setTag('megtérés')" data-tag="megtérés">megtérés</button>
+    
+    <button class="chip" onclick="setTag('megújulás')" data-tag="megújulás">megújulás</button>
+    
+    <button class="chip" onclick="setTag('remény')" data-tag="remény">remény</button>
+    
+    <button class="chip" onclick="setTag('személyes hit')" data-tag="személyes hit">személyes hit</button>
+    
+    <button class="chip" onclick="setTag('személyes hitélet')" data-tag="személyes hitélet">személyes hitélet</button>
+    
+    <button class="chip" onclick="setTag('szenvedés')" data-tag="szenvedés">szenvedés</button>
+    
+    <button class="chip" onclick="setTag('szokások')" data-tag="szokások">szokások</button>
+    
+    <button class="chip" onclick="setTag('tanulás')" data-tag="tanulás">tanulás</button>
+    
+    <button class="chip" onclick="setTag('vágy Isten után')" data-tag="vágy Isten után">vágy Isten után</button>
+    
+    <button class="chip" onclick="setTag('válás')" data-tag="válás">válás</button>
+    
+    <button class="chip" onclick="setTag('őszinteség')" data-tag="őszinteség">őszinteség</button>
+    
+  </div>
+  <div class="filter-row" id="src-row">
+    <span class="filter-lbl">Forrás</span>
+    <button class="chip active" onclick="setSrc('mind')" data-src="mind">Összes</button>
+    
+    <button class="chip" onclick="setSrc('Crossway')" data-src="Crossway">Crossway</button>
+    
+    <button class="chip" onclick="setSrc('Magyarországi Baptista Egyház')" data-src="Magyarországi Baptista Egyház">Magyarországi Baptista Egyház</button>
+    
+    <button class="chip" onclick="setSrc('Relevant Magazine')" data-src="Relevant Magazine">Relevant Magazine</button>
+    
+    <button class="chip" onclick="setSrc('The Gospel Coalition')" data-src="The Gospel Coalition">The Gospel Coalition</button>
+    
+  </div>
+</div>
+<hr class="divider">
 
-  <article class="card"
+<div class="layout">
+  <p class="visible-note"><span id="visible-count">9</span> kártya látható</p>
+
+  
+  
+  <div class="featured" id="featured-card"
     data-tags="kétség és hit,közösség,őszinteség,lelki út"
     data-forras="Relevant Magazine"
     data-score="8.8"
     data-date="2026-04-29"
-    data-search="amikor a hit megrendül – hogyan járjuk együtt a kétség útját? valószínűleg mindannyiunknak volt már olyan időszaka, amikor a hit nem volt magától értetődő. nem azért, mert nem akartunk hinni, hanem mert valami megrendült belül – csöndesen, lassan, szinte észrevétlenül. ez a téma azoknak szól, akik már átmentek ilyen szakaszon, és azoknak is, akik most vannak benne. a kétség nem a hit ellentéte – sokszor éppen a legőszintébb formája annak, hogy valaki komolyan veszi istent és a saját lelki életét. ma este nem válaszokat keresünk, hanem bátorságot ahhoz, hogy kimondhassuk, ami van. mert amit egyedül hordozunk, az előbb-utóbb nehezebb lesz, mint amilyennek lennie kellene. kétség és hit közösség őszinteség lelki út"
-    aria-label="Amikor a hit megrendül – hogyan járjuk együtt a kétség útját?">
+    data-search="amikor a hit megrendül – hogyan járjuk együtt a kétség útját? valószínűleg mindannyiunknak volt már olyan időszaka, amikor a hit nem volt magától értetődő. nem azért, mert nem akartunk hinni, hanem mert valami megrendült belül – csöndesen, lassan, szinte észrevétlenül. ez a téma azoknak szól, akik már átmentek ilyen szakaszon, és azoknak is, akik most vannak benne. a kétség nem a hit ellentéte – sokszor éppen a legőszintébb formája annak, hogy valaki komolyan veszi istent és a saját lelki életét. ma este nem válaszokat keresünk, hanem bátorságot ahhoz, hogy kimondhassuk, ami van. mert amit egyedül hordozunk, az előbb-utóbb nehezebb lesz, mint amilyennek lennie kellene. kétség és hit közösség őszinteség lelki út">
 
-    <div class="card-meta">
+    <div class="featured-label">Heti kiemelt téma</div>
+    <div class="feat-tags">
       <span class="tag">kétség és hit</span><span class="tag">közösség</span><span class="tag">őszinteség</span><span class="tag">lelki út</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.8</span>
+      <span class="score-pill">&#9733; 8.8</span>
     </div>
-
-    <div class="card-source">
-      <span>&#127760; Relevant Magazine</span>
-      <span>&#128197; 2026-04-29</span>
+    <h2 class="featured-title">Amikor a hit megrendül – hogyan járjuk együtt a kétség útját?</h2>
+    <div class="featured-meta">
+      <span>Relevant Magazine</span>
+      <span>2026-04-29</span>
     </div>
-
-    <h2>Amikor a hit megrendül – hogyan járjuk együtt a kétség útját?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Valószínűleg mindannyiunknak volt már olyan időszaka, amikor a hit nem volt magától értetődő. Nem azért, mert nem akartunk hinni, hanem mert valami megrendült belül – csöndesen, lassan, szinte észrevétlenül. Ez a téma azoknak szól, akik már átmentek ilyen szakaszon, és azoknak is, akik most vannak benne. A kétség nem a hit ellentéte – sokszor éppen a legőszintébb formája annak, hogy valaki komolyan veszi Istent és a saját lelki életét. Ma este nem válaszokat keresünk, hanem bátorságot ahhoz, hogy kimondhassuk, ami van. Mert amit egyedül hordozunk, az előbb-utóbb nehezebb lesz, mint amilyennek lennie kellene.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>1. A kétség mint belső tapasztalat – mit érez az ember, amikor megrendül a hite? (Nem elvont teológia, hanem valós érzések: szégyen, magány, bizonytalanság.)</li><li>2. Tamás példája: a kimondott kétség nem gyengeség, hanem kapu – mit tett Tamás, és mi lett belőle? (Jn 20:24-29)</li><li>3. Miért hordjuk egyedül? – a közösség szerepe a hit válságaiban: mikor és miért zárkózunk el még a bizalmas emberektől is?</li><li>4. A lassú, csendes visszaút – miért nem kapjuk meg a damaszkuszi élményt, és mi az, ami mégis megtart?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Volt-e olyan időszakod, amikor inkább »eljátszottad« a hitet, mert nem merted kimondani, hogy kérdéseid vannak? Mi tartott vissza az őszinteségtől?</li><li>Ha valaki a csoportban most kétségek között van – mit gondolsz, merné-e ezt megmondani nekünk? Ha nem, akkor mi az, amit mi mint közösség rosszul csinálunk?</li><li>Mi a különbség aközött, hogy valaki elveszíti a hitét, és aközött, hogy őszinte lesz Istennel a kételyei felől? Hol húzódik ez a határ?</li><li>Az olvasmány azt mondja: »Az eltemetett kétség nem erősebb hitet teremt, csak hamis hitet.« Szerinted miért vonzóbb mégis sokaknak az eltemetés, mint a kimondás?</li><li>Tamást sokan »kételkedő Tamásként« emlegetik – mintha ez szégyen lenne. Mit gondolsz, mit nyert és mit veszített azzal, hogy hangosan kimondta a kételyét?</li>
-        </ul>
-      </div>
-    </details>
+    <p class="featured-intro">Valószínűleg mindannyiunknak volt már olyan időszaka, amikor a hit nem volt magától értetődő. Nem azért, mert nem akartunk hinni, hanem mert valami megrendült belül – csöndesen, lassan, szinte észrevétlenül. Ez a téma azoknak szól, akik már átmentek ilyen szakaszon, és azoknak is, akik most vannak benne. A kétség nem a hit ellentéte – sokszor éppen a legőszintébb formája annak, hogy valaki komolyan veszi Istent és a saját lelki életét. Ma este nem válaszokat keresünk, hanem bátorságot ahhoz, hogy kimondhassuk, ami van. Mert amit egyedül hordozunk, az előbb-utóbb nehezebb lesz, mint amilyennek lennie kellene.</p>
 
     
     <div class="ige-box">
-      <p class="ige-hely">&#128214; János 20:27-28</p>
+      <div class="ige-ref">&#128214; János 20:27-28</div>
       
-      <p class="ige-szoveg">&#8222;Azután szólt Tamáshoz: Nyújtsd ide a ujjadat, és nézd meg a kezeimet; nyújtsd ide a kezedet, és tedd az oldalamba; és ne légy hitetlen, hanem hívő. Tamás pedig felele és monda néki: Én Uram és én Istenem!&#8221;</p>
+      <div class="ige-text">&#8222;Azután szólt Tamáshoz: Nyújtsd ide a ujjadat, és nézd meg a kezeimet; nyújtsd ide a kezedet, és tedd az oldalamba; és ne légy hitetlen, hanem hívő. Tamás pedig felele és monda néki: Én Uram és én Istenem!&#8221;</div>
       
     </div>
     
 
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit veszel észre abból, ahogyan Jézus Tamáshoz fordul – van-e benne szemrehányás, türelmetlenség, vagy valami más?</li><li>Tamás nem magyarázkodik, nem mentegetőzik – csak azt mondja: »Én Uram és én Istenem!« Mit gondolsz, mi történt benne az előző hetekben, ami ehhez a válaszhoz vezetett?</li><li>Ez a jelenet nyilvánosan játszódik le, a többi tanítvány előtt. Mit jelent számodra, hogy Jézus nem négyszemközt kezelte Tamás kételyét?</li>
-        </ul>
+    <div class="featured-body">
+      <div>
+        <div class="feat-section-title">Témafeldolgozó kérdések</div>
+        <ul class="q-list"><li>Volt-e olyan időszakod, amikor inkább »eljátszottad« a hitet, mert nem merted kimondani, hogy kérdéseid vannak? Mi tartott vissza az őszinteségtől?</li><li>Ha valaki a csoportban most kétségek között van – mit gondolsz, merné-e ezt megmondani nekünk? Ha nem, akkor mi az, amit mi mint közösség rosszul csinálunk?</li><li>Mi a különbség aközött, hogy valaki elveszíti a hitét, és aközött, hogy őszinte lesz Istennel a kételyei felől? Hol húzódik ez a határ?</li><li>Az olvasmány azt mondja: »Az eltemetett kétség nem erősebb hitet teremt, csak hamis hitet.« Szerinted miért vonzóbb mégis sokaknak az eltemetés, mint a kimondás?</li><li>Tamást sokan »kételkedő Tamásként« emlegetik – mintha ez szégyen lenne. Mit gondolsz, mit nyert és mit veszített azzal, hogy hangosan kimondta a kételyét?</li></ul>
       </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Van-e most valami kérdésed, kételyed Istennel vagy a hiteddel kapcsolatban, amit még egyetlen emberrel sem osztottál meg? Meg tudnád-e tenni a héten – akár egy baráttal, akár ima formájában Istennel?</li><li>Gondolj valakire a közeledben, aki talán most hasonló kétségek között jár, de nem meri kimondani. Mit tehetnél konkrétan a héten azért, hogy biztonságos teret adj neki?</li><li>Hogyan változtatnád meg azt, ahogyan csoportotok reagál, ha valaki megosztja a kételyeit? Van-e egy konkrét lépés, amit ti – mint közösség – megtehetnétek, hogy ez biztonságosabb legyen?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-        </div>
+      <div>
+        <div class="feat-section-title">Alkalmazás – hogyan?</div>
+        <ul class="q-list"><li>Van-e most valami kérdésed, kételyed Istennel vagy a hiteddel kapcsolatban, amit még egyetlen emberrel sem osztottál meg? Meg tudnád-e tenni a héten – akár egy baráttal, akár ima formájában Istennel?</li><li>Gondolj valakire a közeledben, aki talán most hasonló kétségek között jár, de nem meri kimondani. Mit tehetnél konkrétan a héten azért, hogy biztonságos teret adj neki?</li><li>Hogyan változtatnád meg azt, ahogyan csoportotok reagál, ha valaki megosztja a kételyeit? Van-e egy konkrét lépés, amit ti – mint közösség – megtehetnétek, hogy ez biztonságosabb legyen?</li></ul>
+        
+        <div class="feat-section-title" style="margin-top:0.85rem">Igehely-kérdések</div>
+        <ul class="q-list"><li>Mit veszel észre abból, ahogyan Jézus Tamáshoz fordul – van-e benne szemrehányás, türelmetlenség, vagy valami más?</li><li>Tamás nem magyarázkodik, nem mentegetőzik – csak azt mondja: »Én Uram és én Istenem!« Mit gondolsz, mi történt benne az előző hetekben, ami ehhez a válaszhoz vezetett?</li><li>Ez a jelenet nyilvánosan játszódik le, a többi tanítvány előtt. Mit jelent számodra, hogy Jézus nem négyszemközt kezelte Tamás kételyét?</li></ul>
         
       </div>
-    </details>
-    
+    </div>
+    <div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--border); display:flex; justify-content:flex-end">
+      <a class="src-link" href="https://relevantmagazine.com/faith/i-have-spiritual-doubts-now-what/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+    </div>
+  </div>
+  
 
-    <p class="forras-link"><a href="https://relevantmagazine.com/faith/i-have-spiritual-doubts-now-what/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Amikor a hit megrendül – hogyan járjuk együtt a kétség útját?">Eredeti forrás &#8599;</a></p>
-
-  </article>
-
+  <div class="cards-grid" id="grid">
+  
   <article class="card"
     data-tags="szenvedés,isten jósága,hit válságban,bizalom"
     data-forras="The Gospel Coalition"
     data-score="8.6"
     data-date="2026-05-01"
     data-search="bízhatunk-e egy olyan istenben, aki engedi a rosszat? valószínűleg mindannyiunknak volt már olyan pillanata, amikor azt kérdeztük: "hol van isten, amikor a legjobban szükségem lenne rá?" ez nem hitetlenség – ez emberi őszinteség. a szenvedés kérdése nem elvont teológiai probléma, hanem nagyon is húsbavágó valóság: betegség, veszteség, igazságtalanság, tragédia. sokan – akár hívők is – elbizonytalanodnak isten jóságában, amikor szembenéznek ezekkel. ez az alkalom nem arra törekszik, hogy minden kérdésre kész választ adjon, hanem hogy együtt, bátran nézzünk szembe azokkal a kérdésekkel, amelyeket sokszor inkább elhallgatunk. jób, jézus és a történelem legsötétebb korszakainak tapasztalatai mind arról tanúskodnak, hogy isten nem idegen a szenvedéstől – de mit jelent ez számunkra ma? szenvedés isten jósága hit válságban bizalom"
+    style="animation-delay:0.0s"
     aria-label="Bízhatunk-e egy olyan Istenben, aki engedi a rosszat?">
 
-    <div class="card-meta">
-      <span class="tag">szenvedés</span><span class="tag">Isten jósága</span><span class="tag">hit válságban</span><span class="tag">bizalom</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.6</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">szenvedés</span><span class="tag">Isten jósága</span><span class="tag">hit válságban</span><span class="tag">bizalom</span>
+        <span class="score-pill">&#9733; 8.6</span>
+      </div>
+      <h2 class="card-title">Bízhatunk-e egy olyan Istenben, aki engedi a rosszat?</h2>
+      <div class="card-meta-row">
+        <span>The Gospel Coalition</span><span>2026-05-01</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; The Gospel Coalition</span>
-      <span>&#128197; 2026-05-01</span>
-    </div>
-
-    <h2>Bízhatunk-e egy olyan Istenben, aki engedi a rosszat?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Valószínűleg mindannyiunknak volt már olyan pillanata, amikor azt kérdeztük: "Hol van Isten, amikor a legjobban szükségem lenne rá?" Ez nem hitetlenség – ez emberi őszinteség. A szenvedés kérdése nem elvont teológiai probléma, hanem nagyon is húsbavágó valóság: betegség, veszteség, igazságtalanság, tragédia. Sokan – akár hívők is – elbizonytalanodnak Isten jóságában, amikor szembenéznek ezekkel. Ez az alkalom nem arra törekszik, hogy minden kérdésre kész választ adjon, hanem hogy együtt, bátran nézzünk szembe azokkal a kérdésekkel, amelyeket sokszor inkább elhallgatunk. Jób, Jézus és a történelem legsötétebb korszakainak tapasztalatai mind arról tanúskodnak, hogy Isten nem idegen a szenvedéstől – de mit jelent ez számunkra ma?</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>A rossz és szenvedés valósága – személyes és történelmi tapasztalatok (pl. holokauszt, Jób története): miért nem lehet ezt intellektuálisan "megoldani"?</li><li>A "Hol van Isten?" kérdés különböző formái: Isten csendje, az áldozatok hibáztatása és a tehetetlenség érzése sötét időkben.</li><li>Jézus és a szenvedés: mit jelent, hogy Isten maga is belépett a fájdalomba? Hogyan változtatja ez meg a kérdést?</li><li>Bizalom vagy magyarázat: lehetséges-e Istenben bízni akkor is, ha nem értjük, amit megenged? Mi az alapja ennek a bizalomnak?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Volt-e olyan időszak az életedben, amikor Isten hallgatása fájt a legjobban – és mit kezdtél ezzel a fájdalommal?</li><li>Hajlamosak vagyunk-e – akár tudattalanul is – a szenvedőket okolni a szenvedésükért? Honnan jön ez az ösztön, és mit árul el rólunk?</li><li>Ha Isten jó és mindenható, miért nem avatkozik be nyilvánvalóan és azonnal? Melyik válaszkísérletet találod a legkevésbé meggyőzőnek – és miért?</li><li>Hogyan hat a közösségünkre, ha valaki nehéz kérdésekkel érkezik? Biztonságos hely-e ez a csoport az ilyen őszinteséghez?</li><li>Ismersz-e valakit, aki egy tragédia miatt hátat fordított Istennek – és volt-e a te reakciódnak is szerepe ebben?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Jób 23:8-10</p>
-      
-      <p class="ige-szoveg">&#8222;Ha előre megyek, nem találom őt, ha visszafelé, nem veszem észre. Ha balra fordulok, nem látom, ha jobbra rejtőzöm, nem pillantom meg. De ő tudja az én utamat; ha megvizsgál engem, mint az arany, úgy kerülök ki.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit érezhetett Jób, amikor ezeket a szavakat leírta – és mi az, ami mégis különös ebben a panaszban?</li><li>Hogyan fér meg egymás mellett ugyanabban az emberben a "nem találom Istent" és a "de ő tudja az én utamat"? Te hogyan élted már meg ezt a feszültséget?</li><li>Mit mond ez az igerész arról, hogy milyen imádságot fogad el Isten – szabad-e panaszkodni előtte?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Van-e egy kimondatlan kérdésed vagy sérelmed Istennel szemben, amelyet eddig nem mertél hangosan megfogalmazni? Írd le, és vidd imádságban Isten elé még ezen a héten.</li><li>Gondolj valakire a közeledben, aki most szenved vagy kételkedik – hogyan tudnál mellé állni úgy, hogy ne siess magyarázatokkal, hanem egyszerűen jelen légy?</li><li>Keresd meg ezen a héten azt az egy dolgot, ami jelenleg a legnehezebben egyeztethető össze számodra Isten jóságával, és oszd meg egy megbízható testvérrel vagy a csoporttal.</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Valószínűleg mindannyiunknak volt már olyan pillanata, amikor azt kérdeztük: "Hol van Isten, amikor a legjobban szükségem lenne rá?" Ez nem hitetlenség – ez emberi őszinteség. A szenvedés kérdése nem elvont teológiai probléma, hanem nagyon is húsbavágó valóság: betegség, veszteség, igazságtalanság, tragédia. Sokan – akár hívők is – elbizonytalanodnak Isten jóságában, amikor szembenéznek ezekkel. Ez az alkalom nem arra törekszik, hogy minden kérdésre kész választ adjon, hanem hogy együtt, bátran nézzünk szembe azokkal a kérdésekkel, amelyeket sokszor inkább elhallgatunk. Jób, Jézus és a történelem legsötétebb korszakainak tapasztalatai mind arról tanúskodnak, hogy Isten nem idegen a szenvedéstől – de mit jelent ez számunkra ma?</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>A rossz és szenvedés valósága – személyes és történelmi tapasztalatok (pl. holokauszt, Jób története): miért nem lehet ezt intellektuálisan "megoldani"?</li><li>A "Hol van Isten?" kérdés különböző formái: Isten csendje, az áldozatok hibáztatása és a tehetetlenség érzése sötét időkben.</li><li>Jézus és a szenvedés: mit jelent, hogy Isten maga is belépett a fájdalomba? Hogyan változtatja ez meg a kérdést?</li><li>Bizalom vagy magyarázat: lehetséges-e Istenben bízni akkor is, ha nem értjük, amit megenged? Mi az alapja ennek a bizalomnak?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Volt-e olyan időszak az életedben, amikor Isten hallgatása fájt a legjobban – és mit kezdtél ezzel a fájdalommal?</li><li>Hajlamosak vagyunk-e – akár tudattalanul is – a szenvedőket okolni a szenvedésükért? Honnan jön ez az ösztön, és mit árul el rólunk?</li><li>Ha Isten jó és mindenható, miért nem avatkozik be nyilvánvalóan és azonnal? Melyik válaszkísérletet találod a legkevésbé meggyőzőnek – és miért?</li><li>Hogyan hat a közösségünkre, ha valaki nehéz kérdésekkel érkezik? Biztonságos hely-e ez a csoport az ilyen őszinteséghez?</li><li>Ismersz-e valakit, aki egy tragédia miatt hátat fordított Istennek – és volt-e a te reakciódnak is szerepe ebben?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Jób 23:8-10</div>
+        
+        <div class="ige-text">&#8222;Ha előre megyek, nem találom őt, ha visszafelé, nem veszem észre. Ha balra fordulok, nem látom, ha jobbra rejtőzöm, nem pillantom meg. De ő tudja az én utamat; ha megvizsgál engem, mint az arany, úgy kerülök ki.&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit érezhetett Jób, amikor ezeket a szavakat leírta – és mi az, ami mégis különös ebben a panaszban?</li><li>Hogyan fér meg egymás mellett ugyanabban az emberben a "nem találom Istent" és a "de ő tudja az én utamat"? Te hogyan élted már meg ezt a feszültséget?</li><li>Mit mond ez az igerész arról, hogy milyen imádságot fogad el Isten – szabad-e panaszkodni előtte?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Van-e egy kimondatlan kérdésed vagy sérelmed Istennel szemben, amelyet eddig nem mertél hangosan megfogalmazni? Írd le, és vidd imádságban Isten elé még ezen a héten.</li><li>Gondolj valakire a közeledben, aki most szenved vagy kételkedik – hogyan tudnál mellé állni úgy, hogy ne siess magyarázatokkal, hanem egyszerűen jelen légy?</li><li>Keresd meg ezen a héten azt az egy dolgot, ami jelenleg a legnehezebben egyeztethető össze számodra Isten jóságával, és oszd meg egy megbízható testvérrel vagy a csoporttal.</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/trust-god-allows-evil/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Bízhatunk-e egy olyan Istenben, aki engedi a rosszat?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.thegospelcoalition.org/podcasts/tgc-podcast/trust-god-allows-evil/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="megújulás,közösség,ima,lelki élet"
     data-forras="Magyarországi Baptista Egyház"
     data-score="8.6"
     data-date="2026-04-27"
     data-search="megújulás – személyesen és együtt néha úgy érezzük, elfáradt bennünk valami – a hitünk, a lelkesedésünk, a közösséghez való tartozás öröme. nem vagyunk ezzel egyedül. a telek konferencián több mint harminc lelkipásztor és keresztény munkás gyűlt össze pontosan erről: mi kell ahhoz, hogy valaki – és egy közösség – megújuljon? ez a téma nemcsak konferenciákra való, hanem a mi kis csoportunkra is érvényes. mert a megújulás mindig valahol a kicsiben kezdődik – egy imában, egy őszinte beszélgetésben, egy döntésben. ma este arra hívjuk egymást, hogy nézzünk rá bátran a saját lelki állapotunkra – és arra is, hogy mi van köztünk, ebben a közösségben. megújulás közösség ima lelki élet"
+    style="animation-delay:0.05s"
     aria-label="Megújulás – személyesen és együtt">
 
-    <div class="card-meta">
-      <span class="tag">megújulás</span><span class="tag">közösség</span><span class="tag">ima</span><span class="tag">lelki élet</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.6</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">megújulás</span><span class="tag">közösség</span><span class="tag">ima</span><span class="tag">lelki élet</span>
+        <span class="score-pill">&#9733; 8.6</span>
+      </div>
+      <h2 class="card-title">Megújulás – személyesen és együtt</h2>
+      <div class="card-meta-row">
+        <span>Magyarországi Baptista Egyház</span><span>2026-04-27</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; Magyarországi Baptista Egyház</span>
-      <span>&#128197; 2026-04-27</span>
-    </div>
-
-    <h2>Megújulás – személyesen és együtt</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Néha úgy érezzük, elfáradt bennünk valami – a hitünk, a lelkesedésünk, a közösséghez való tartozás öröme. Nem vagyunk ezzel egyedül. A TELEK konferencián több mint harminc lelkipásztor és keresztény munkás gyűlt össze pontosan erről: mi kell ahhoz, hogy valaki – és egy közösség – megújuljon? Ez a téma nemcsak konferenciákra való, hanem a mi kis csoportunkra is érvényes. Mert a megújulás mindig valahol a kicsiben kezdődik – egy imában, egy őszinte beszélgetésben, egy döntésben. Ma este arra hívjuk egymást, hogy nézzünk rá bátran a saját lelki állapotunkra – és arra is, hogy mi van köztünk, ebben a közösségben.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>Mit értünk megújuláson? – személyes és közösségi szinten egyaránt megvizsgálva</li><li>Az ima szerepe a megújulásban – miért épp ott kezdték a konferencián?</li><li>Mikor fárad el egy közösség? – jelek, okok, minták</li><li>Mi akadályoz minket abban, hogy megújuljunk – egyénileg és csoportként?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mikor érezted utoljára, hogy lelkileg valóban friss vagy – és mi előzte meg azt az állapotot?</li><li>Mi a különbség szerinted aközött, hogy valaki "vallásos életet él", és aközött, hogy "megújult"?</li><li>Ha őszinte vagy magaddal: van-e valami a hitéletedben, ami inkább megszokásból megy, mint meggyőződésből?</li><li>Miben érzel fáradtságot ebben a közösségben – és eddig miért nem mondtad ki hangosan?</li><li>Mitől fél egy közösség, ha valóban megújulna? Veszítene valamit?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Zsoltárok 85:7</p>
-      
-      <p class="ige-szoveg">&#8222;Nem te támasztasz-e minket újra életre, hogy néped örvendezzen benned?&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit árul el ez a kérdés a zsoltáros lelkiállapotáról – és mit kér valójában Istentől?</li><li>Miért fontos, hogy a megújulás célja itt nem az egyén boldogsága, hanem a közösség öröme?</li><li>Mit jelent számodra az, hogy a megújulás Istentől "adatik" – mit tesz ő, és mit teszünk mi?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Melyik az az egy konkrét szokásod vagy hozzáállásod, amin a héten változtatsz – hogy a hitéletedben kevesebb legyen az automatizmus?</li><li>Kivel osztod meg ebből a csoportból őszintén a lelki állapotodat a következő héten – és mikor?</li><li>Hogyan járulhatsz hozzá te ahhoz, hogy ez a közösség élőbb legyen? Mondj egy konkrét lépést, amit holnaptól megtehetsz.</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Néha úgy érezzük, elfáradt bennünk valami – a hitünk, a lelkesedésünk, a közösséghez való tartozás öröme. Nem vagyunk ezzel egyedül. A TELEK konferencián több mint harminc lelkipásztor és keresztény munkás gyűlt össze pontosan erről: mi kell ahhoz, hogy valaki – és egy közösség – megújuljon? Ez a téma nemcsak konferenciákra való, hanem a mi kis csoportunkra is érvényes. Mert a megújulás mindig valahol a kicsiben kezdődik – egy imában, egy őszinte beszélgetésben, egy döntésben. Ma este arra hívjuk egymást, hogy nézzünk rá bátran a saját lelki állapotunkra – és arra is, hogy mi van köztünk, ebben a közösségben.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>Mit értünk megújuláson? – személyes és közösségi szinten egyaránt megvizsgálva</li><li>Az ima szerepe a megújulásban – miért épp ott kezdték a konferencián?</li><li>Mikor fárad el egy közösség? – jelek, okok, minták</li><li>Mi akadályoz minket abban, hogy megújuljunk – egyénileg és csoportként?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mikor érezted utoljára, hogy lelkileg valóban friss vagy – és mi előzte meg azt az állapotot?</li><li>Mi a különbség szerinted aközött, hogy valaki "vallásos életet él", és aközött, hogy "megújult"?</li><li>Ha őszinte vagy magaddal: van-e valami a hitéletedben, ami inkább megszokásból megy, mint meggyőződésből?</li><li>Miben érzel fáradtságot ebben a közösségben – és eddig miért nem mondtad ki hangosan?</li><li>Mitől fél egy közösség, ha valóban megújulna? Veszítene valamit?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Zsoltárok 85:7</div>
+        
+        <div class="ige-text">&#8222;Nem te támasztasz-e minket újra életre, hogy néped örvendezzen benned?&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit árul el ez a kérdés a zsoltáros lelkiállapotáról – és mit kér valójában Istentől?</li><li>Miért fontos, hogy a megújulás célja itt nem az egyén boldogsága, hanem a közösség öröme?</li><li>Mit jelent számodra az, hogy a megújulás Istentől "adatik" – mit tesz ő, és mit teszünk mi?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Melyik az az egy konkrét szokásod vagy hozzáállásod, amin a héten változtatsz – hogy a hitéletedben kevesebb legyen az automatizmus?</li><li>Kivel osztod meg ebből a csoportból őszintén a lelki állapotodat a következő héten – és mikor?</li><li>Hogyan járulhatsz hozzá te ahhoz, hogy ez a közösség élőbb legyen? Mondj egy konkrét lépést, amit holnaptól megtehetsz.</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.baptist.hu/egyeni-es-kozossegi-megujulas/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Megújulás – személyesen és együtt">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.baptist.hu/egyeni-es-kozossegi-megujulas/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="bűnbánat,megtérés,őszinteség,közösségi élet"
     data-forras="Crossway"
     data-score="8.6"
     data-date="2026-04-27"
     data-search="igazi bűnbánat vagy csak látszat? – hogyan ismerjük fel a valódit? mindannyiunknak van valakije az emlékezetében, aki hitelesen megtértnek látszott, aztán mégis kiderült, hogy valami nem volt rendben. de az ellenkezője is igaz: sokszor túl hamar ítéljük meg valakinek a változását, és évek múlva csodálkozva látjuk, hogy mégiscsak valódi volt. az igazi és a hamis bűnbánat megkülönböztetése az egyik legnehezebb feladat egy közösségben – hiszen még jézus tanítványai sem tudták, hogy júdás áruló. ez a téma nem elvont teológia, hanem nagyon is húsbavágó: érinti, hogyan fogadjuk vissza a bűnét megvalló testvért, hogyan reagálunk, ha valaki bocsánatot kér, és hogyan tekintünk saját bűnbánatunkra. ma este nem ítélkezni szeretnénk, hanem együtt gondolkodni és őszintébbé válni. bűnbánat megtérés őszinteség közösségi élet"
+    style="animation-delay:0.1s"
     aria-label="Igazi bűnbánat vagy csak látszat? – Hogyan ismerjük fel a valódit?">
 
-    <div class="card-meta">
-      <span class="tag">bűnbánat</span><span class="tag">megtérés</span><span class="tag">őszinteség</span><span class="tag">közösségi élet</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.6</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">bűnbánat</span><span class="tag">megtérés</span><span class="tag">őszinteség</span><span class="tag">közösségi élet</span>
+        <span class="score-pill">&#9733; 8.6</span>
+      </div>
+      <h2 class="card-title">Igazi bűnbánat vagy csak látszat? – Hogyan ismerjük fel a valódit?</h2>
+      <div class="card-meta-row">
+        <span>Crossway</span><span>2026-04-27</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; Crossway</span>
-      <span>&#128197; 2026-04-27</span>
-    </div>
-
-    <h2>Igazi bűnbánat vagy csak látszat? – Hogyan ismerjük fel a valódit?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Mindannyiunknak van valakije az emlékezetében, aki hitelesen megtértnek látszott, aztán mégis kiderült, hogy valami nem volt rendben. De az ellenkezője is igaz: sokszor túl hamar ítéljük meg valakinek a változását, és évek múlva csodálkozva látjuk, hogy mégiscsak valódi volt. Az igazi és a hamis bűnbánat megkülönböztetése az egyik legnehezebb feladat egy közösségben – hiszen még Jézus tanítványai sem tudták, hogy Júdás áruló. Ez a téma nem elvont teológia, hanem nagyon is húsbavágó: érinti, hogyan fogadjuk vissza a bűnét megvalló testvért, hogyan reagálunk, ha valaki bocsánatot kér, és hogyan tekintünk saját bűnbánatunkra. Ma este nem ítélkezni szeretnénk, hanem együtt gondolkodni és őszintébbé válni.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>Saul és Dávid esete: mindkettő súlyos bűnt követett el, mégis teljesen más volt a szívük állapota – mit mutat ez a külső és belső különbségéről?</li><li>Miért olyan nehéz megkülönböztetni az igazi bűnbánatot a látszattól? (Júdás, Démász és saját tapasztalataink)</li><li>Mi az az isteni fenntartás, amit el kell fogadnunk: egyedül Isten látja a szívet – mit jelent ez a közösség számára a gyakorlatban?</li><li>Mikor érdemes mégis véleményt alkotni valaki bűnbánatáról, és milyen jeleket érdemes figyelni az idő múlásával?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Volt-e olyan személy az életedben, akinek a megtérésében eleinte hittél, de később kiderült, hogy nem volt valódi – vagy fordítva: kételkedtél benne, de az idő igazolta? Mit tanultál ebből?</li><li>Szerinted mi a különbség aközött, amikor valaki azért bánja meg a bűnét, mert lebukott, és aközött, amikor önként vallja meg? Hogyan hat ez arra, ahogy a közösség fogadja?</li><li>Ha őszinte vagy magaddal: volt-e olyan bűnbánatod, amelyet inkább a következményektől való félelem váltott ki, nem pedig valódi szívbeli fordulat? Mit kezdtél ezzel?</li><li>Miért csábít minket a közösségi élet arra, hogy gyorsan és véglegesen ítéljük meg valakinek az őszinteségét – és milyen károkat okoz ez?</li><li>Ha igaz, hogy egyedül Isten látja a szívet, mit jelent ez a mi felelősségünkre nézve akkor, amikor valaki bocsánatot kér tőlünk, vagy visszafogadást a közösségbe?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; 1Sámuel 16:7</p>
-      
-      <p class="ige-szoveg">&#8222;De az Úr ezt mondta Sámuelnek: Ne a megjelenésére és nagy termetére nézz, mert én megvetettem őt. Én nem azt nézem, amit az ember néz. Az ember azt nézi, ami a szeme előtt van, de az Úr azt nézi, ami a szívben van.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit mond ez a vers arról, hogyan látunk mi emberek, és hogyan lát Isten? Hol érzel feszültséget a kettő között a saját életedben?</li><li>Ha Isten a szívet nézi, mi a mi szerepünk és felelősségünk egy közösségben, amikor valaki bűnbánatot fejez ki?</li><li>Meglepett-e valami ebből a szakaszból? Van-e olyan mondat, amellyel nehéz azonosulni, vagy amelyik különösen erősen szólt?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Van-e jelenleg valaki a közeledben, akinek a bűnbánatában vagy változásában kételkedsz? Mit tennél, ha ma este döntened kellene: adnál-e neki több időt és bizalmat – és mi lenne ennek az első konkrét lépése?</li><li>Gondolj a saját legutóbbi bocsánatkérésedre! Őszintén: mi motiválta – a következmény elkerülése vagy valódi szívbeli fordulat? Ha szükséges, hogyan pótolhatod vagy mélyítheted azt még ebben a héten?</li><li>Mit változtatsz meg konkrétan abban, ahogyan a közösségben ítélkezel vagy véleményt alkotsz mások megtéréséről? Mit hagysz abba, és mit kezdesz el?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Mindannyiunknak van valakije az emlékezetében, aki hitelesen megtértnek látszott, aztán mégis kiderült, hogy valami nem volt rendben. De az ellenkezője is igaz: sokszor túl hamar ítéljük meg valakinek a változását, és évek múlva csodálkozva látjuk, hogy mégiscsak valódi volt. Az igazi és a hamis bűnbánat megkülönböztetése az egyik legnehezebb feladat egy közösségben – hiszen még Jézus tanítványai sem tudták, hogy Júdás áruló. Ez a téma nem elvont teológia, hanem nagyon is húsbavágó: érinti, hogyan fogadjuk vissza a bűnét megvalló testvért, hogyan reagálunk, ha valaki bocsánatot kér, és hogyan tekintünk saját bűnbánatunkra. Ma este nem ítélkezni szeretnénk, hanem együtt gondolkodni és őszintébbé válni.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>Saul és Dávid esete: mindkettő súlyos bűnt követett el, mégis teljesen más volt a szívük állapota – mit mutat ez a külső és belső különbségéről?</li><li>Miért olyan nehéz megkülönböztetni az igazi bűnbánatot a látszattól? (Júdás, Démász és saját tapasztalataink)</li><li>Mi az az isteni fenntartás, amit el kell fogadnunk: egyedül Isten látja a szívet – mit jelent ez a közösség számára a gyakorlatban?</li><li>Mikor érdemes mégis véleményt alkotni valaki bűnbánatáról, és milyen jeleket érdemes figyelni az idő múlásával?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Volt-e olyan személy az életedben, akinek a megtérésében eleinte hittél, de később kiderült, hogy nem volt valódi – vagy fordítva: kételkedtél benne, de az idő igazolta? Mit tanultál ebből?</li><li>Szerinted mi a különbség aközött, amikor valaki azért bánja meg a bűnét, mert lebukott, és aközött, amikor önként vallja meg? Hogyan hat ez arra, ahogy a közösség fogadja?</li><li>Ha őszinte vagy magaddal: volt-e olyan bűnbánatod, amelyet inkább a következményektől való félelem váltott ki, nem pedig valódi szívbeli fordulat? Mit kezdtél ezzel?</li><li>Miért csábít minket a közösségi élet arra, hogy gyorsan és véglegesen ítéljük meg valakinek az őszinteségét – és milyen károkat okoz ez?</li><li>Ha igaz, hogy egyedül Isten látja a szívet, mit jelent ez a mi felelősségünkre nézve akkor, amikor valaki bocsánatot kér tőlünk, vagy visszafogadást a közösségbe?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; 1Sámuel 16:7</div>
+        
+        <div class="ige-text">&#8222;De az Úr ezt mondta Sámuelnek: Ne a megjelenésére és nagy termetére nézz, mert én megvetettem őt. Én nem azt nézem, amit az ember néz. Az ember azt nézi, ami a szeme előtt van, de az Úr azt nézi, ami a szívben van.&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit mond ez a vers arról, hogyan látunk mi emberek, és hogyan lát Isten? Hol érzel feszültséget a kettő között a saját életedben?</li><li>Ha Isten a szívet nézi, mi a mi szerepünk és felelősségünk egy közösségben, amikor valaki bűnbánatot fejez ki?</li><li>Meglepett-e valami ebből a szakaszból? Van-e olyan mondat, amellyel nehéz azonosulni, vagy amelyik különösen erősen szólt?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Van-e jelenleg valaki a közeledben, akinek a bűnbánatában vagy változásában kételkedsz? Mit tennél, ha ma este döntened kellene: adnál-e neki több időt és bizalmat – és mi lenne ennek az első konkrét lépése?</li><li>Gondolj a saját legutóbbi bocsánatkérésedre! Őszintén: mi motiválta – a következmény elkerülése vagy valódi szívbeli fordulat? Ha szükséges, hogyan pótolhatod vagy mélyítheted azt még ebben a héten?</li><li>Mit változtatsz meg konkrétan abban, ahogyan a közösségben ítélkezel vagy véleményt alkotsz mások megtéréséről? Mit hagysz abba, és mit kezdesz el?</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.crossway.org/articles/how-do-we-know-if-repentance-is-genuine/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Igazi bűnbánat vagy csak látszat? – Hogyan ismerjük fel a valódit?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.crossway.org/articles/how-do-we-know-if-repentance-is-genuine/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="válás,szenvedés,közösség,remény"
     data-forras="The Gospel Coalition"
     data-score="8.4"
     data-date="2026-04-30"
     data-search="amikor a válás betér az életünkbe – hogyan legyünk ott egymásnak? szinte nincs olyan közösség, amelyet ne érintett volna valamilyen formában a válás – akár saját tapasztalatként, akár közeli barát vagy családtag életében. mégis sokszor néma csend vesz körül minket, amikor erről kellene beszélni: nem tudjuk, mit mondjunk, vagy félünk rosszat mondani. ez az alkalom nem ítélkezni és nem magyarázni akar, hanem teret adni: hogyan lehet egy nem kívánt válás közepette istenre támaszkodni, és hogyan lehet valódi támaszt nyújtani annak, aki ezt éli át? azoknak szól különösen, akik már átmentek ezen, akik most mennek át rajta, és azoknak is, akik szeretnék jobban megérteni, hogyan legyenek jelen egy ilyen helyzetben. baráti, őszinte beszélgetésre hívunk – ítélet nélkül. válás szenvedés közösség remény"
+    style="animation-delay:0.15000000000000002s"
     aria-label="Amikor a válás betér az életünkbe – hogyan legyünk ott egymásnak?">
 
-    <div class="card-meta">
-      <span class="tag">válás</span><span class="tag">szenvedés</span><span class="tag">közösség</span><span class="tag">remény</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.4</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">válás</span><span class="tag">szenvedés</span><span class="tag">közösség</span><span class="tag">remény</span>
+        <span class="score-pill">&#9733; 8.4</span>
+      </div>
+      <h2 class="card-title">Amikor a válás betér az életünkbe – hogyan legyünk ott egymásnak?</h2>
+      <div class="card-meta-row">
+        <span>The Gospel Coalition</span><span>2026-04-30</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; The Gospel Coalition</span>
-      <span>&#128197; 2026-04-30</span>
-    </div>
-
-    <h2>Amikor a válás betér az életünkbe – hogyan legyünk ott egymásnak?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Szinte nincs olyan közösség, amelyet ne érintett volna valamilyen formában a válás – akár saját tapasztalatként, akár közeli barát vagy családtag életében. Mégis sokszor néma csend vesz körül minket, amikor erről kellene beszélni: nem tudjuk, mit mondjunk, vagy félünk rosszat mondani. Ez az alkalom nem ítélkezni és nem magyarázni akar, hanem teret adni: hogyan lehet egy nem kívánt válás közepette Istenre támaszkodni, és hogyan lehet valódi támaszt nyújtani annak, aki ezt éli át? Azoknak szól különösen, akik már átmentek ezen, akik most mennek át rajta, és azoknak is, akik szeretnék jobban megérteni, hogyan legyenek jelen egy ilyen helyzetben. Baráti, őszinte beszélgetésre hívunk – ítélet nélkül.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>A válás mint közösségi valóság: hogyan érinti a válás nemcsak az egyént, hanem a barátokat, a gyülekezeteket és a gyerekeket is?</li><li>Mit mond (és mit nem mond) az Ige a mély veszteségről és a reményről – mely ígéretek tartanak meg, amikor semmi sem kontrollálható?</li><li>Mit mondjunk – és mit ne mondjunk – annak, aki válás közepén van? Miért nehéz elmenni a gyülekezetbe, és miért mégis érdemes?</li><li>Hogyan tud egy közösség valóban ott lenni – nem tanácsokkal, hanem jelenléttel, konkrét tettekkel és hosszú türelemmel?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Ha őszintén végiggondolod: mi az, ami visszatart attól, hogy felhívj vagy felkeress valakit, akiről tudod, hogy válás közepén van? Félelem? Kínos csend? Nem tudod, mit mondj?</li><li>Volt már olyan, hogy valaki rosszkor mondta a »jó dolgot« neked, vagy te mondtad azt valakinek? Mit tanultál ebből arról, hogyan lehet valóban jelen lenni?</li><li>Miért lehet az, hogy éppen a gyülekezetbe menni a legnehezebb egy válás után – és mit gondolsz, mit tehet a közösség azért, hogy ez ne így legyen?</li><li>Amikor valami fájdalmas nem az akaratod szerint alakul – egy válás, egy kapcsolat elvesztése, egy remény összeomlása –, mit jelent számodra konkrétan Istenre bízni az irányítást? Csak szép szó ez, vagy van mögötte valódi tapasztalatod?</li><li>Kinek volt Isten »elegendő« a mélységben – és kinek nem látod még ezt? Mi teszi lehetővé, hogy valaki eljusson oda, hogy az evangéliumi remény ne üres vigasz legyen, hanem valódi kapaszkodó?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Zsoltárok 34:19</p>
-      
-      <p class="ige-szoveg">&#8222;Az ÚR közel van a megtört szívűekhez, és megsegíti az összetört lelkűeket.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit mond pontosan ez az ige Isten helyzetéről és közelségéről – és mit nem ígér? Mi a különbség aközött, hogy Isten »közel van«, és aközött, hogy »azonnal megold«?</li><li>Mi lep meg vagy zavar ebben a versben? Van valami benne, ami nehéz elfogadni, ha épp valaki közelében ülsz, aki szenved?</li><li>Hogyan lehet ezt az igeverset hitelesen továbbadni valakinek, aki épp nem érzi Isten közelségét – anélkül, hogy üres vigasszá váljon?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Van-e a közösségedben vagy a barátaid között valaki, akiről tudod, hogy válás vagy nagy veszteség közepén van, és akit eddig nem kerestél meg? Mit tennél konkrétan a következő héten – egy üzenet, egy hívás, egy személyes találkozó?</li><li>Gondold végig: mit szoktál mondani vigasztalásként, ami valójában lezárja a beszélgetést ahelyett, hogy megnyitná? Mit mondanál helyette legközelebb, ha valaki fájdalomról mesél?</li><li>Ha a saját életedben van valami, amit most nem tudsz kontrollálni, és nehezen bízod Istenre: mi lenne az első konkrét lépés, amellyel tudatosan Isten elé hoznád – nem csak imában, hanem a közösségedben is kimondva?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:70%"></span></span><span class="qa-num">7</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Szinte nincs olyan közösség, amelyet ne érintett volna valamilyen formában a válás – akár saját tapasztalatként, akár közeli barát vagy családtag életében. Mégis sokszor néma csend vesz körül minket, amikor erről kellene beszélni: nem tudjuk, mit mondjunk, vagy félünk rosszat mondani. Ez az alkalom nem ítélkezni és nem magyarázni akar, hanem teret adni: hogyan lehet egy nem kívánt válás közepette Istenre támaszkodni, és hogyan lehet valódi támaszt nyújtani annak, aki ezt éli át? Azoknak szól különösen, akik már átmentek ezen, akik most mennek át rajta, és azoknak is, akik szeretnék jobban megérteni, hogyan legyenek jelen egy ilyen helyzetben. Baráti, őszinte beszélgetésre hívunk – ítélet nélkül.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>A válás mint közösségi valóság: hogyan érinti a válás nemcsak az egyént, hanem a barátokat, a gyülekezeteket és a gyerekeket is?</li><li>Mit mond (és mit nem mond) az Ige a mély veszteségről és a reményről – mely ígéretek tartanak meg, amikor semmi sem kontrollálható?</li><li>Mit mondjunk – és mit ne mondjunk – annak, aki válás közepén van? Miért nehéz elmenni a gyülekezetbe, és miért mégis érdemes?</li><li>Hogyan tud egy közösség valóban ott lenni – nem tanácsokkal, hanem jelenléttel, konkrét tettekkel és hosszú türelemmel?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Ha őszintén végiggondolod: mi az, ami visszatart attól, hogy felhívj vagy felkeress valakit, akiről tudod, hogy válás közepén van? Félelem? Kínos csend? Nem tudod, mit mondj?</li><li>Volt már olyan, hogy valaki rosszkor mondta a »jó dolgot« neked, vagy te mondtad azt valakinek? Mit tanultál ebből arról, hogyan lehet valóban jelen lenni?</li><li>Miért lehet az, hogy éppen a gyülekezetbe menni a legnehezebb egy válás után – és mit gondolsz, mit tehet a közösség azért, hogy ez ne így legyen?</li><li>Amikor valami fájdalmas nem az akaratod szerint alakul – egy válás, egy kapcsolat elvesztése, egy remény összeomlása –, mit jelent számodra konkrétan Istenre bízni az irányítást? Csak szép szó ez, vagy van mögötte valódi tapasztalatod?</li><li>Kinek volt Isten »elegendő« a mélységben – és kinek nem látod még ezt? Mi teszi lehetővé, hogy valaki eljusson oda, hogy az evangéliumi remény ne üres vigasz legyen, hanem valódi kapaszkodó?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Zsoltárok 34:19</div>
+        
+        <div class="ige-text">&#8222;Az ÚR közel van a megtört szívűekhez, és megsegíti az összetört lelkűeket.&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit mond pontosan ez az ige Isten helyzetéről és közelségéről – és mit nem ígér? Mi a különbség aközött, hogy Isten »közel van«, és aközött, hogy »azonnal megold«?</li><li>Mi lep meg vagy zavar ebben a versben? Van valami benne, ami nehéz elfogadni, ha épp valaki közelében ülsz, aki szenved?</li><li>Hogyan lehet ezt az igeverset hitelesen továbbadni valakinek, aki épp nem érzi Isten közelségét – anélkül, hogy üres vigasszá váljon?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Van-e a közösségedben vagy a barátaid között valaki, akiről tudod, hogy válás vagy nagy veszteség közepén van, és akit eddig nem kerestél meg? Mit tennél konkrétan a következő héten – egy üzenet, egy hívás, egy személyes találkozó?</li><li>Gondold végig: mit szoktál mondani vigasztalásként, ami valójában lezárja a beszélgetést ahelyett, hogy megnyitná? Mit mondanál helyette legközelebb, ha valaki fájdalomról mesél?</li><li>Ha a saját életedben van valami, amit most nem tudsz kontrollálni, és nehezen bízod Istenre: mi lenne az első konkrét lépés, amellyel tudatosan Isten elé hoznád – nem csak imában, hanem a közösségedben is kimondva?</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:70%"></div></div><span class="qa-num">7</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.thegospelcoalition.org/podcasts/deep-dish/face-unwanted-divorce/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Amikor a válás betér az életünkbe – hogyan legyünk ott egymásnak?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.thegospelcoalition.org/podcasts/deep-dish/face-unwanted-divorce/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="bibliaolvasás,lelki növekedés,személyes hitélet,tanulás"
     data-forras="Crossway"
     data-score="8.4"
     data-date="2026-04-30"
     data-search="mit veszítünk, ha nem olvassuk magunk a bibliát? mindannyiunknak vannak időszakok, amikor a bibliával való kapcsolatunk inkább passzív, mint aktív – hallgatunk prédikációt, olvasunk valakitől idézeteket, vagy csak egy-egy versre bukkanunk a közösségi médiában. ez nem feltétlenül rossz, de vajon elegendő? glenna marshall spanyoltanulási élményén keresztül arra hív minket, hogy gondoljuk át: mit nyerünk, és mit veszítünk azzal, ha mi magunk ülünk le a bibliával. ez a téma mindannyiunknak szól – akár régóta járunk gyülekezetbe, akár most kezdünk el komolyan gondolkodni a hitünkről. különösen időszerű ez a kérdés egy olyan korban, amikor rengeteg alkalmazás, podcast és rövid tartalom helyettesítheti a mélyebb személyes elmélyedést. ma este nem arról beszélgetünk, hogy eleget olvasunk-e, hanem arról, hogy milyen kapcsolatban vagyunk isten szavával. bibliaolvasás lelki növekedés személyes hitélet tanulás"
+    style="animation-delay:0.2s"
     aria-label="Mit veszítünk, ha nem olvassuk magunk a Bibliát?">
 
-    <div class="card-meta">
-      <span class="tag">bibliaolvasás</span><span class="tag">lelki növekedés</span><span class="tag">személyes hitélet</span><span class="tag">tanulás</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.4</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">bibliaolvasás</span><span class="tag">lelki növekedés</span><span class="tag">személyes hitélet</span><span class="tag">tanulás</span>
+        <span class="score-pill">&#9733; 8.4</span>
+      </div>
+      <h2 class="card-title">Mit veszítünk, ha nem olvassuk magunk a Bibliát?</h2>
+      <div class="card-meta-row">
+        <span>Crossway</span><span>2026-04-30</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; Crossway</span>
-      <span>&#128197; 2026-04-30</span>
-    </div>
-
-    <h2>Mit veszítünk, ha nem olvassuk magunk a Bibliát?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Mindannyiunknak vannak időszakok, amikor a Bibliával való kapcsolatunk inkább passzív, mint aktív – hallgatunk prédikációt, olvasunk valakitől idézeteket, vagy csak egy-egy versre bukkanunk a közösségi médiában. Ez nem feltétlenül rossz, de vajon elegendő? Glenna Marshall spanyoltanulási élményén keresztül arra hív minket, hogy gondoljuk át: mit nyerünk, és mit veszítünk azzal, ha mi magunk ülünk le a Bibliával. Ez a téma mindannyiunknak szól – akár régóta járunk gyülekezetbe, akár most kezdünk el komolyan gondolkodni a hitünkről. Különösen időszerű ez a kérdés egy olyan korban, amikor rengeteg alkalmazás, podcast és rövid tartalom helyettesítheti a mélyebb személyes elmélyedést. Ma este nem arról beszélgetünk, hogy eleget olvasunk-e, hanem arról, hogy milyen kapcsolatban vagyunk Isten szavával.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>A rövidítés csapdája: miben különbözik az, ha valaki más emészti meg helyettünk a Bibliát, attól, amikor mi magunk foglalkozunk vele?</li><li>A bibliatanulmányozás célja nem elsősorban tudás, hanem személy: Isten megismerése, az ő megváltástörténetének megértése és közelebb kerülés hozzá.</li><li>Élő és ható Ige: hogyan formál minket a rendszeres, személyes Igével való foglalkozás – lassan, de valóságosan?</li><li>Konkrét akadályok és valódi segítségek: mi tartja vissza a csoport tagjait a személyes bibliaolvasástól, és mi segíthet ezen változtatni?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mikor érezted utoljára, hogy a Biblia olvasása közben valami személyes és élő üzenetet kaptál – nem másoktól hallottat, hanem olyat, amit te magad fedeztél fel? Mi történt akkor?</li><li>Mit gondolsz: lehet valaki érett keresztény anélkül, hogy rendszeresen és önállóan olvasná a Bibliát – csupán prédikációkra, könyvekre és más emberekre támaszkodva?</li><li>Hol van a határvonal az egészséges segítségek (kommentárok, alkalmazások, prédikációk) használata és a személyes elmélyedés kiszervezése között?</li><li>Milyen belső ellenállást vagy kellemetlen érzést tapasztalsz, amikor a bibliaolvasásról van szó – és szerinted honnan ered ez?</li><li>Ha igaz, hogy az Ige idővel Krisztushoz hasonlóvá formál minket – mit mond az életünkről az, amennyire foglalkozunk vele, vagy amennyire nem?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Zsoltárok 119:97-99</p>
-      
-      <p class="ige-szoveg">&#8222;Mily igen szeretem a te törvényedet! Egész nap arról gondolkodom. Bölcsebbé teszel engem ellenségeimnél a te parancsolataid által, mert azok mindenkor velem vannak. Minden tanítómnál értelmesebb vagyok, mert a te bizonyságaidról gondolkodom.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit árul el ez a zsoltár arról, hogy a zsoltáros milyen érzelmi és szellemi kapcsolatban van Isten igéjével – mi lep meg ebben téged?</li><li>A zsoltáros azt mondja, hogy egész nap Isten törvényéről gondolkodik – hogyan nézne ki ez a mai életünkben, és mit kellene ehhez másképp csinálni?</li><li>Mit jelent számodra az, hogy az Ige bölcsebbé tesz – milyen helyzetekben tapasztaltad már ezt a gyakorlatban?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Válassz ki egyetlen konkrét időpontot és helyszínt a következő héten, amikor legalább 15 percet töltesz egyedül a Bibliával – nem podcasttal, nem kommentárral, csak a szöveggel és egy kérdéssel: Mit mond nekem ma ez?</li><li>Azonosíts egy szokást az életedben, amely jelenleg helyettesíti a személyes bibliaolvasást (pl. prédikáció-hallgatás, keresztény Instagram-tartalmak) – hogyan tudnád azt kiegészíteni, nem felváltani az önálló Igével való foglalkozással?</li><li>Kérd meg egy bizalmas barátodat vagy csoporttársadat, hogy a következő két héten kérdezzen rá: Olvastál-e ezen a héten egyedül a Bibliában? – és te is tedd meg ugyanezt neki.</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:70%"></span></span><span class="qa-num">7</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Mindannyiunknak vannak időszakok, amikor a Bibliával való kapcsolatunk inkább passzív, mint aktív – hallgatunk prédikációt, olvasunk valakitől idézeteket, vagy csak egy-egy versre bukkanunk a közösségi médiában. Ez nem feltétlenül rossz, de vajon elegendő? Glenna Marshall spanyoltanulási élményén keresztül arra hív minket, hogy gondoljuk át: mit nyerünk, és mit veszítünk azzal, ha mi magunk ülünk le a Bibliával. Ez a téma mindannyiunknak szól – akár régóta járunk gyülekezetbe, akár most kezdünk el komolyan gondolkodni a hitünkről. Különösen időszerű ez a kérdés egy olyan korban, amikor rengeteg alkalmazás, podcast és rövid tartalom helyettesítheti a mélyebb személyes elmélyedést. Ma este nem arról beszélgetünk, hogy eleget olvasunk-e, hanem arról, hogy milyen kapcsolatban vagyunk Isten szavával.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>A rövidítés csapdája: miben különbözik az, ha valaki más emészti meg helyettünk a Bibliát, attól, amikor mi magunk foglalkozunk vele?</li><li>A bibliatanulmányozás célja nem elsősorban tudás, hanem személy: Isten megismerése, az ő megváltástörténetének megértése és közelebb kerülés hozzá.</li><li>Élő és ható Ige: hogyan formál minket a rendszeres, személyes Igével való foglalkozás – lassan, de valóságosan?</li><li>Konkrét akadályok és valódi segítségek: mi tartja vissza a csoport tagjait a személyes bibliaolvasástól, és mi segíthet ezen változtatni?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mikor érezted utoljára, hogy a Biblia olvasása közben valami személyes és élő üzenetet kaptál – nem másoktól hallottat, hanem olyat, amit te magad fedeztél fel? Mi történt akkor?</li><li>Mit gondolsz: lehet valaki érett keresztény anélkül, hogy rendszeresen és önállóan olvasná a Bibliát – csupán prédikációkra, könyvekre és más emberekre támaszkodva?</li><li>Hol van a határvonal az egészséges segítségek (kommentárok, alkalmazások, prédikációk) használata és a személyes elmélyedés kiszervezése között?</li><li>Milyen belső ellenállást vagy kellemetlen érzést tapasztalsz, amikor a bibliaolvasásról van szó – és szerinted honnan ered ez?</li><li>Ha igaz, hogy az Ige idővel Krisztushoz hasonlóvá formál minket – mit mond az életünkről az, amennyire foglalkozunk vele, vagy amennyire nem?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Zsoltárok 119:97-99</div>
+        
+        <div class="ige-text">&#8222;Mily igen szeretem a te törvényedet! Egész nap arról gondolkodom. Bölcsebbé teszel engem ellenségeimnél a te parancsolataid által, mert azok mindenkor velem vannak. Minden tanítómnál értelmesebb vagyok, mert a te bizonyságaidról gondolkodom.&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit árul el ez a zsoltár arról, hogy a zsoltáros milyen érzelmi és szellemi kapcsolatban van Isten igéjével – mi lep meg ebben téged?</li><li>A zsoltáros azt mondja, hogy egész nap Isten törvényéről gondolkodik – hogyan nézne ki ez a mai életünkben, és mit kellene ehhez másképp csinálni?</li><li>Mit jelent számodra az, hogy az Ige bölcsebbé tesz – milyen helyzetekben tapasztaltad már ezt a gyakorlatban?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Válassz ki egyetlen konkrét időpontot és helyszínt a következő héten, amikor legalább 15 percet töltesz egyedül a Bibliával – nem podcasttal, nem kommentárral, csak a szöveggel és egy kérdéssel: Mit mond nekem ma ez?</li><li>Azonosíts egy szokást az életedben, amely jelenleg helyettesíti a személyes bibliaolvasást (pl. prédikáció-hallgatás, keresztény Instagram-tartalmak) – hogyan tudnád azt kiegészíteni, nem felváltani az önálló Igével való foglalkozással?</li><li>Kérd meg egy bizalmas barátodat vagy csoporttársadat, hogy a következő két héten kérdezzen rá: Olvastál-e ezen a héten egyedül a Bibliában? – és te is tedd meg ugyanezt neki.</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:70%"></div></div><span class="qa-num">7</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.crossway.org/articles/what-we-lose-when-we-dont-study-the-bible-ourselves/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Mit veszítünk, ha nem olvassuk magunk a Bibliát?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.crossway.org/articles/what-we-lose-when-we-dont-study-the-bible-ourselves/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="férfiak,barátság,magány,közösség"
     data-forras="Relevant Magazine"
     data-score="8.4"
     data-date="2026-04-30"
     data-search="körülvéve, mégis egyedül – mit tehet a közösség a férfiak magányáért? ismerős a kép: sok ismerős, tele a telefon, futó üzenetek – és mégis, ha valóban bajba kerülnénk, hirtelen nagyon rövid lenne a lista azokról, akik tényleg ott lennének. a kutatások szerint a férfiak még soha nem voltak ennyire barát nélkül: 1990-ben az amerikai férfiak 3%-ának nem volt egyetlen közeli barátja sem, 2021-re ez az arány 15%-ra ugrott. ez nem csupán amerikai jelenség – a mi gyülekezeti köreinkben is ott ül mellettünk az a férfi, aki mindig mosolyog, de senki sem tudja, mi van belül. ez az alkalom azoknak szól, akik már érezték ezt a fajta belső ürességet a tömegben – és azoknak is, akik még nem vették észre, hogy éppen benne vannak. együtt gondolkodunk arról, hogyan lehet a gyülekezet több, mint vasárnapi találkozóhely. férfiak barátság magány közösség"
+    style="animation-delay:0.25s"
     aria-label="Körülvéve, mégis egyedül – mit tehet a közösség a férfiak magányáért?">
 
-    <div class="card-meta">
-      <span class="tag">férfiak</span><span class="tag">barátság</span><span class="tag">magány</span><span class="tag">közösség</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.4</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">férfiak</span><span class="tag">barátság</span><span class="tag">magány</span><span class="tag">közösség</span>
+        <span class="score-pill">&#9733; 8.4</span>
+      </div>
+      <h2 class="card-title">Körülvéve, mégis egyedül – mit tehet a közösség a férfiak magányáért?</h2>
+      <div class="card-meta-row">
+        <span>Relevant Magazine</span><span>2026-04-30</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; Relevant Magazine</span>
-      <span>&#128197; 2026-04-30</span>
-    </div>
-
-    <h2>Körülvéve, mégis egyedül – mit tehet a közösség a férfiak magányáért?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Ismerős a kép: sok ismerős, tele a telefon, futó üzenetek – és mégis, ha valóban bajba kerülnénk, hirtelen nagyon rövid lenne a lista azokról, akik tényleg ott lennének. A kutatások szerint a férfiak még soha nem voltak ennyire barát nélkül: 1990-ben az amerikai férfiak 3%-ának nem volt egyetlen közeli barátja sem, 2021-re ez az arány 15%-ra ugrott. Ez nem csupán amerikai jelenség – a mi gyülekezeti köreinkben is ott ül mellettünk az a férfi, aki mindig mosolyog, de senki sem tudja, mi van belül. Ez az alkalom azoknak szól, akik már érezték ezt a fajta belső ürességet a tömegben – és azoknak is, akik még nem vették észre, hogy éppen benne vannak. Együtt gondolkodunk arról, hogyan lehet a gyülekezet több, mint vasárnapi találkozóhely.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>A »látszólag nem egyedül« jelenség: mi a különbség a kapcsolat és az összetartozás között? Miért könnyű összetéveszteni a kettőt?</li><li>A modern élet kényelme mint elszigetelődési mechanizmus: hogyan téveszme az, hogy a súrlódásmentes élet jobb élet? Mit veszítünk, amikor kiiktatjuk a véletlenszerű emberi találkozásokat?</li><li>A férfiak érzelmi támogatása: miért nehezebb férfiként segítséget kérni, elfogadni, vagy épp adni? Milyen láthatatlan elvárások nehezednek a férfiakra a barátsággal kapcsolatban?</li><li>A gyülekezet mint lehetséges válasz: mit tud nyújtani egy házicsoport vagy keresztény közösség, amit más struktúrák nem? Hol akadunk el mi magunk is?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Ha ma történne veled valami igazán súlyos, ki az a két-három ember, akit felhívnál? Mit árul el rólad ez a lista – és mit árulna el, ha üres lenne?</li><li>Mikor voltál utoljára olyan helyzetben, hogy egy másik férfival őszintén beszéltél arról, ami belül zajlik? Mi tette lehetővé – vagy mi akadályozta meg?</li><li>A modern kényelem arra épül, hogy ne kelljen másokkal találkoznunk. Te tudatosan választasz-e »súrlódást« – vagyis olyan helyzeteket, ahol emberekkel kell lenned, még ha nem is kényelmes?</li><li>Miért gondolod, hogy sok férfi inkább viccekkel és mémekkel teli csoportchaten marad, minthogy valódi mélységű barátságot építsen? Van ebben számodra is igazság?</li><li>A gyülekezetünkben van-e olyan férfi, akiről azt gondolod, hogy valójában egyedül van – csak mi nem látjuk? És mit tettünk, vagy nem tettünk eddig ezzel kapcsolatban?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Prédikátor 4:9-10</p>
-      
-      <p class="ige-szoveg">&#8222;Jobb kettőnek lenni, mint egyedül, mert fáradozásuknak jó gyümölcse van. Mert ha elesnek, az egyik felemeli a társát. De jaj az egyedülállónak, ha elesik, és nincs, aki felemelje.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit feltételez ez az igevers arról, hogy milyen az élet? Miért számít, hogy »elesés« esetén ki van mellettünk?</li><li>A szöveg nagyon konkrét képet használ: felemelni a másikat. Milyen mai megfelelői lennének ennek a ti életetekben – mit jelent ma »felemelni« valakit?</li><li>Ha ez az igazság ilyen egyértelmű és régi, miért nem épülnek maguktól ezek a kapcsolatok – sem a világban, sem a gyülekezetben?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Gondolj egy férfira a gyülekezetben vagy a környezetedben, akiről nem tudod, hogyan van valójában. Még ezen a héten szánj rá időt – nem csoportban, hanem négyszemközt, akár egy kávé erejéig. Mit fogsz konkrétan megtenni?</li><li>Van-e egy olyan szokásod vagy kényelmi megoldásod (pl. házhozszállítás, zárt garázs, fejhallgató a liftben), ami rendszeresen elvesz tőled egy lehetséges emberi találkozást? Mire cserélhetnéd le tudatosan a következő héten?</li><li>Döntsd el: megosztasz-e a csoporttal – vagy legalább egy megbízható emberrel – valamit, ami most valóban nehéz neked, és amit eddig nem mondtál el senkinek. Mi kellene ahhoz, hogy ez megtörténjen?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:70%"></span></span><span class="qa-num">7</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Ismerős a kép: sok ismerős, tele a telefon, futó üzenetek – és mégis, ha valóban bajba kerülnénk, hirtelen nagyon rövid lenne a lista azokról, akik tényleg ott lennének. A kutatások szerint a férfiak még soha nem voltak ennyire barát nélkül: 1990-ben az amerikai férfiak 3%-ának nem volt egyetlen közeli barátja sem, 2021-re ez az arány 15%-ra ugrott. Ez nem csupán amerikai jelenség – a mi gyülekezeti köreinkben is ott ül mellettünk az a férfi, aki mindig mosolyog, de senki sem tudja, mi van belül. Ez az alkalom azoknak szól, akik már érezték ezt a fajta belső ürességet a tömegben – és azoknak is, akik még nem vették észre, hogy éppen benne vannak. Együtt gondolkodunk arról, hogyan lehet a gyülekezet több, mint vasárnapi találkozóhely.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>A »látszólag nem egyedül« jelenség: mi a különbség a kapcsolat és az összetartozás között? Miért könnyű összetéveszteni a kettőt?</li><li>A modern élet kényelme mint elszigetelődési mechanizmus: hogyan téveszme az, hogy a súrlódásmentes élet jobb élet? Mit veszítünk, amikor kiiktatjuk a véletlenszerű emberi találkozásokat?</li><li>A férfiak érzelmi támogatása: miért nehezebb férfiként segítséget kérni, elfogadni, vagy épp adni? Milyen láthatatlan elvárások nehezednek a férfiakra a barátsággal kapcsolatban?</li><li>A gyülekezet mint lehetséges válasz: mit tud nyújtani egy házicsoport vagy keresztény közösség, amit más struktúrák nem? Hol akadunk el mi magunk is?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Ha ma történne veled valami igazán súlyos, ki az a két-három ember, akit felhívnál? Mit árul el rólad ez a lista – és mit árulna el, ha üres lenne?</li><li>Mikor voltál utoljára olyan helyzetben, hogy egy másik férfival őszintén beszéltél arról, ami belül zajlik? Mi tette lehetővé – vagy mi akadályozta meg?</li><li>A modern kényelem arra épül, hogy ne kelljen másokkal találkoznunk. Te tudatosan választasz-e »súrlódást« – vagyis olyan helyzeteket, ahol emberekkel kell lenned, még ha nem is kényelmes?</li><li>Miért gondolod, hogy sok férfi inkább viccekkel és mémekkel teli csoportchaten marad, minthogy valódi mélységű barátságot építsen? Van ebben számodra is igazság?</li><li>A gyülekezetünkben van-e olyan férfi, akiről azt gondolod, hogy valójában egyedül van – csak mi nem látjuk? És mit tettünk, vagy nem tettünk eddig ezzel kapcsolatban?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Prédikátor 4:9-10</div>
+        
+        <div class="ige-text">&#8222;Jobb kettőnek lenni, mint egyedül, mert fáradozásuknak jó gyümölcse van. Mert ha elesnek, az egyik felemeli a társát. De jaj az egyedülállónak, ha elesik, és nincs, aki felemelje.&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit feltételez ez az igevers arról, hogy milyen az élet? Miért számít, hogy »elesés« esetén ki van mellettünk?</li><li>A szöveg nagyon konkrét képet használ: felemelni a másikat. Milyen mai megfelelői lennének ennek a ti életetekben – mit jelent ma »felemelni« valakit?</li><li>Ha ez az igazság ilyen egyértelmű és régi, miért nem épülnek maguktól ezek a kapcsolatok – sem a világban, sem a gyülekezetben?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Gondolj egy férfira a gyülekezetben vagy a környezetedben, akiről nem tudod, hogyan van valójában. Még ezen a héten szánj rá időt – nem csoportban, hanem négyszemközt, akár egy kávé erejéig. Mit fogsz konkrétan megtenni?</li><li>Van-e egy olyan szokásod vagy kényelmi megoldásod (pl. házhozszállítás, zárt garázs, fejhallgató a liftben), ami rendszeresen elvesz tőled egy lehetséges emberi találkozást? Mire cserélhetnéd le tudatosan a következő héten?</li><li>Döntsd el: megosztasz-e a csoporttal – vagy legalább egy megbízható emberrel – valamit, ami most valóban nehéz neked, és amit eddig nem mondtál el senkinek. Mi kellene ahhoz, hogy ez megtörténjen?</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:70%"></div></div><span class="qa-num">7</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://relevantmagazine.com/faith/men-have-never-had-fewer-friends-what-can-the-church-do-about-that/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Körülvéve, mégis egyedül – mit tehet a közösség a férfiak magányáért?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://relevantmagazine.com/faith/men-have-never-had-fewer-friends-what-can-the-church-do-about-that/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="bibliaolvasás,lelki táplálék,szokások,vágy isten után"
     data-forras="The Gospel Coalition"
     data-score="8.2"
     data-date="2026-04-26"
     data-search="megízlelni az igét – hogyan fejleszthetjük az ige iránti éhségünket? van, akit szinte vonz a biblia, és van, akinél hetekig porosodik az éjjeliszekrényen. ha őszintén bevallható, hogy az ige olvasása inkább kötelességnek, mint örömnek érződik, akkor ez a kártya neked szól. egy egyszerű, de mélyen igaz hasonlatból indulunk ki: ahogy az ízlésünket fejleszteni lehet az ételek terén, úgy az ige iránti vágyat is meg lehet tanulni. nem kell tehát várni arra, hogy egyszer majd megérkezik a motiváció. ezt az estét arra szánjuk, hogy egymás között őszintén beszéljünk arról, milyen a mi viszonyunk a szentírással – és hogy mi segíthet ezen változtatni. nem ítélkező légkörben, hanem testvérként, egymás felé fordulva. bibliaolvasás lelki táplálék szokások vágy isten után"
+    style="animation-delay:0.30000000000000004s"
     aria-label="Megízlelni az Igét – hogyan fejleszthetjük az Ige iránti éhségünket?">
 
-    <div class="card-meta">
-      <span class="tag">Bibliaolvasás</span><span class="tag">lelki táplálék</span><span class="tag">szokások</span><span class="tag">vágy Isten után</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.2</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">Bibliaolvasás</span><span class="tag">lelki táplálék</span><span class="tag">szokások</span><span class="tag">vágy Isten után</span>
+        <span class="score-pill">&#9733; 8.2</span>
+      </div>
+      <h2 class="card-title">Megízlelni az Igét – hogyan fejleszthetjük az Ige iránti éhségünket?</h2>
+      <div class="card-meta-row">
+        <span>The Gospel Coalition</span><span>2026-04-26</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; The Gospel Coalition</span>
-      <span>&#128197; 2026-04-26</span>
-    </div>
-
-    <h2>Megízlelni az Igét – hogyan fejleszthetjük az Ige iránti éhségünket?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Van, akit szinte vonz a Biblia, és van, akinél hetekig porosodik az éjjeliszekrényen. Ha őszintén bevallható, hogy az Ige olvasása inkább kötelességnek, mint örömnek érződik, akkor ez a kártya neked szól. Egy egyszerű, de mélyen igaz hasonlatból indulunk ki: ahogy az ízlésünket fejleszteni lehet az ételek terén, úgy az Ige iránti vágyat is meg lehet tanulni. Nem kell tehát várni arra, hogy egyszer majd megérkezik a motiváció. Ezt az estét arra szánjuk, hogy egymás között őszintén beszéljünk arról, milyen a mi viszonyunk a Szentírással – és hogy mi segíthet ezen változtatni. Nem ítélkező légkörben, hanem testvérként, egymás felé fordulva.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>Az Ige mint lelki táplálék – mit mond erről maga a Biblia? (Jer 15:16, Zsolt 19:10, Mt 4:4)</li><li>A lelki éhségvesztés jelensége: mikor szűnik meg a vágy az Ige iránt, és milyen tüneteken vehető észre?</li><li>Gyakorlati kiút: hogyan lehet elkezdeni olvasni akkor is, ha nincs kedv – és mi változik idővel?</li><li>Közösségi dimenzió: hogyan segíthetjük egymást abban, hogy az Ige iránti vágy ne apadjon el?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Ha őszintén jellemezned kellene, most milyen az Igéhez való viszonyod – éhes vagy, jóllakott, vagy éppen éhségvesztett? Mi áll a hátterében?</li><li>Volt-e olyan időszakod, amikor a Biblia olvasása valóban örömet, sőt ízt adott? Mi volt akkor más – a körülmények, a szokásaid, a szíved állapota?</li><li>A feldolgozott gondolat szerint a lelki alultápláltság tünetei lehetnek az elégedetlenség, a türelmetlenség, a szeretetlenség. Felismersz-e ilyeneket magadban, és hajlandó vagy-e összefüggésbe hozni az Igétől való távolsággal?</li><li>Miért gondolod, hogy sok keresztény számára az Ige olvasása inkább elvárásnak tűnik, mint örömnek – és ebben mekkora a felelőssége a közösségnek, a neveltetésnek, és saját magunknak?</li><li>Mi az, amit eddig még nem próbáltál ki, hogy az Ige közelebb kerüljön hozzád – és mi tartott vissza attól, hogy megpróbáld?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; Jeremiás 15:16</p>
-      
-      <p class="ige-szoveg">&#8222;Ha szavaidat hallottam, ím megöttem azokat, és a te igéid örömömre váltak nékem és szívemnek vígasságára; mert a te nevedről neveztetem, oh Uram, Seregeknek Istene!&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit jelent az, hogy Jeremiás megette Isten szavait? Mit látunk ebből arról, ahogy ő az Igéhez viszonyult?</li><li>Jeremiás ezeket a szavakat egy rendkívül nehéz, sőt elkeseredett szakaszban írta (lásd a kontextust). Mit mond ez arról, hogy mikor és hogyan hat az Ige?</li><li>Mi lep meg ebben a versben, vagy mi az, ami távolinak, idegennek érződik a mi tapasztalatunkhoz képest?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Válassz ki egyetlen konkrét időpontot a holnapi napodban – akár csak 5 percet –, amikor Bibliát olvasol, és mondd el a csoportnak, hogy mikor lesz ez. Hogyan tudod ezt a következő héten is megtartani?</li><li>Kérj meg valakit a csoportból, hogy a következő héten egyszer megkérdezze tőled: olvastál-e Bibliát? – és te is ajánld fel ugyanezt neki. Kivel vállalod ezt a kölcsönös számonkérést?</li><li>Ha az Ige most ízetlen számodra, fogalmazz meg egy rövid, őszinte imát még ma este – amelyben nem azt mondod, hogy szereted a Bibliát, hanem azt kéred Istentől, hogy adjon vágyat iránta. Mersz-e így imádkozni?</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:60%"></span></span><span class="qa-num">6</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Van, akit szinte vonz a Biblia, és van, akinél hetekig porosodik az éjjeliszekrényen. Ha őszintén bevallható, hogy az Ige olvasása inkább kötelességnek, mint örömnek érződik, akkor ez a kártya neked szól. Egy egyszerű, de mélyen igaz hasonlatból indulunk ki: ahogy az ízlésünket fejleszteni lehet az ételek terén, úgy az Ige iránti vágyat is meg lehet tanulni. Nem kell tehát várni arra, hogy egyszer majd megérkezik a motiváció. Ezt az estét arra szánjuk, hogy egymás között őszintén beszéljünk arról, milyen a mi viszonyunk a Szentírással – és hogy mi segíthet ezen változtatni. Nem ítélkező légkörben, hanem testvérként, egymás felé fordulva.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>Az Ige mint lelki táplálék – mit mond erről maga a Biblia? (Jer 15:16, Zsolt 19:10, Mt 4:4)</li><li>A lelki éhségvesztés jelensége: mikor szűnik meg a vágy az Ige iránt, és milyen tüneteken vehető észre?</li><li>Gyakorlati kiút: hogyan lehet elkezdeni olvasni akkor is, ha nincs kedv – és mi változik idővel?</li><li>Közösségi dimenzió: hogyan segíthetjük egymást abban, hogy az Ige iránti vágy ne apadjon el?</li></ul>
         </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Ha őszintén jellemezned kellene, most milyen az Igéhez való viszonyod – éhes vagy, jóllakott, vagy éppen éhségvesztett? Mi áll a hátterében?</li><li>Volt-e olyan időszakod, amikor a Biblia olvasása valóban örömet, sőt ízt adott? Mi volt akkor más – a körülmények, a szokásaid, a szíved állapota?</li><li>A feldolgozott gondolat szerint a lelki alultápláltság tünetei lehetnek az elégedetlenség, a türelmetlenség, a szeretetlenség. Felismersz-e ilyeneket magadban, és hajlandó vagy-e összefüggésbe hozni az Igétől való távolsággal?</li><li>Miért gondolod, hogy sok keresztény számára az Ige olvasása inkább elvárásnak tűnik, mint örömnek – és ebben mekkora a felelőssége a közösségnek, a neveltetésnek, és saját magunknak?</li><li>Mi az, amit eddig még nem próbáltál ki, hogy az Ige közelebb kerüljön hozzád – és mi tartott vissza attól, hogy megpróbáld?</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; Jeremiás 15:16</div>
+        
+        <div class="ige-text">&#8222;Ha szavaidat hallottam, ím megöttem azokat, és a te igéid örömömre váltak nékem és szívemnek vígasságára; mert a te nevedről neveztetem, oh Uram, Seregeknek Istene!&#8221;</div>
         
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit jelent az, hogy Jeremiás megette Isten szavait? Mit látunk ebből arról, ahogy ő az Igéhez viszonyult?</li><li>Jeremiás ezeket a szavakat egy rendkívül nehéz, sőt elkeseredett szakaszban írta (lásd a kontextust). Mit mond ez arról, hogy mikor és hogyan hat az Ige?</li><li>Mi lep meg ebben a versben, vagy mi az, ami távolinak, idegennek érződik a mi tapasztalatunkhoz képest?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Válassz ki egyetlen konkrét időpontot a holnapi napodban – akár csak 5 percet –, amikor Bibliát olvasol, és mondd el a csoportnak, hogy mikor lesz ez. Hogyan tudod ezt a következő héten is megtartani?</li><li>Kérj meg valakit a csoportból, hogy a következő héten egyszer megkérdezze tőled: olvastál-e Bibliát? – és te is ajánld fel ugyanezt neki. Kivel vállalod ezt a kölcsönös számonkérést?</li><li>Ha az Ige most ízetlen számodra, fogalmazz meg egy rövid, őszinte imát még ma este – amelyben nem azt mondod, hogy szereted a Bibliát, hanem azt kéred Istentől, hogy adjon vágyat iránta. Mersz-e így imádkozni?</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:60%"></div></div><span class="qa-num">6</span></div>
+          </div>
+          
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.thegospelcoalition.org/article/develop-taste-gods-word/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Megízlelni az Igét – hogyan fejleszthetjük az Ige iránti éhségünket?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.thegospelcoalition.org/article/develop-taste-gods-word/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
+  
   <article class="card"
     data-tags="evangelizáció,félelem,bátorság,személyes hit"
     data-forras="The Gospel Coalition"
     data-score="8.0"
     data-date="2026-04-26"
     data-search="félek az evangelizációtól – és ez rendben van? valljuk be őszintén: az evangelizáció szó sokunkban szorongást kelt. nem azért, mert nem hisszük, hogy fontos – hanem mert nagyon is tudjuk, hogy az. mit fog gondolni rólam? mi lesz, ha visszautasít? mi lesz a kapcsolatunkkal? ezek nem hitetlenségből fakadó kérdések, hanem nagyon is emberi félelmek. ez az alkalom nem arról szól, hogy »kellene már végre evangelizálni«, hanem arról, hogy együtt nézzük meg: mitől félünk valójában, és ez a félelem mit árul el rólunk – meg az evangéliumhoz való viszonyunkról. jó lesz bátraknak és bátortalanoknak egyaránt. evangelizáció félelem bátorság személyes hit"
+    style="animation-delay:0.35000000000000003s"
     aria-label="Félek az evangelizációtól – és ez rendben van?">
 
-    <div class="card-meta">
-      <span class="tag">evangelizáció</span><span class="tag">félelem</span><span class="tag">bátorság</span><span class="tag">személyes hit</span>
-      <span class="qa-score" title="Minőségi pontszám">&#9733; 8.0</span>
+    <div class="card-header">
+      <div class="card-tags">
+        <span class="tag">evangelizáció</span><span class="tag">félelem</span><span class="tag">bátorság</span><span class="tag">személyes hit</span>
+        <span class="score-pill">&#9733; 8.0</span>
+      </div>
+      <h2 class="card-title">Félek az evangelizációtól – és ez rendben van?</h2>
+      <div class="card-meta-row">
+        <span>The Gospel Coalition</span><span>2026-04-26</span>
+      </div>
     </div>
 
-    <div class="card-source">
-      <span>&#127760; The Gospel Coalition</span>
-      <span>&#128197; 2026-04-26</span>
-    </div>
-
-    <h2>Félek az evangelizációtól – és ez rendben van?</h2>
-
-    <details open>
-      <summary>Bevezető</summary>
-      <div class="section-body"><p>Valljuk be őszintén: az evangelizáció szó sokunkban szorongást kelt. Nem azért, mert nem hisszük, hogy fontos – hanem mert nagyon is tudjuk, hogy az. Mit fog gondolni rólam? Mi lesz, ha visszautasít? Mi lesz a kapcsolatunkkal? Ezek nem hitetlenségből fakadó kérdések, hanem nagyon is emberi félelmek. Ez az alkalom nem arról szól, hogy »kellene már végre evangelizálni«, hanem arról, hogy együtt nézzük meg: mitől félünk valójában, és ez a félelem mit árul el rólunk – meg az evangéliumhoz való viszonyunkról. Jó lesz bátraknak és bátortalanoknak egyaránt.</p></div>
-    </details>
-
-    <details>
-      <summary>Vázlatpontok</summary>
-      <div class="section-body">
-        <ul class="v-list" role="list">
-        <li>1. A félelem valós – és nem szégyen: miért ver a szívünk, amikor Jézusról kellene szólni?</li><li>2. Önvédelem vagy evangélium? – Az elutasítástól való félelem gyökerei, és amit ez elárul elvárásainkról.</li><li>3. Kinek a munkája az evangelizáció? – Az azonnali megtérés mítosza és a reális várakozás fontossága.</li><li>4. Egy konkrét helyzet elemzése: mit teszünk, amikor hirtelen lehetőség adódik – és mi szokott bennünket ilyenkor megakasztani?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#128172; Témafeldolgozó kérdések</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Volt-e olyan helyzet az életedben, amikor érezted, hogy most szólhatnál Jézusról valakinek – de mégsem tettél? Mi tartott vissza pontosan?</li><li>Ha őszinte vagy magaddal: az evangelizációtól való félelmeidben mennyi szól a másik emberről, és mennyi arról, hogy te hogyan nézel ki a szemében?</li><li>Megváltoztatna-e valamit benned, ha komolyan elhinnéd, hogy nem a te feladatod meggyőzni valakit – csak elmondani? Miért igen, vagy miért nem?</li><li>Ismer-e valaki a közvetlen környezetedben téged úgy, hogy tudja: Jézus fontos számodra? Ha nem – mi az oka?</li><li>Milyen elvárást hordozol az evangelizációval kapcsolatban, ami talán nem is bibliai, mégis nyomást helyez rád?</li><li>Elképzelhető-e, hogy a félelmünk az evangelizációtól néha valójában indokolt visszafogottság – amikor a másik ember szempontjait, helyzetét vesszük figyelembe? Hol a határ az egészséges érzékenység és az önfelmentés között?</li><li>Van-e olyan élményed, amikor valaki erőltetetten vagy tapintatlanul evangelizált téged vagy mást – és ez inkább eltávolított Istentől, mint közelebb vitt? Mit tanulsz ebből a saját megközelítésedre nézve?</li><li>Van-e most egy konkrét személy az életedben, akivel kapcsolatban érzed, hogy Isten már régóta »kopogtat«? Mi lenne a legkisebb, de valódi lépés, amit ezen a héten megtehetsz felé?</li><li>Fogalmazz meg magadnak egy mondatot arról, miért fontos neked Jézus – olyan egyszerűen, hogy azt holnap el tudnád mondani egy barátodnak, ha megkérdezné. Írd le, és hozd el legközelebb.</li><li>Kérj meg valakit ebből a csoportból, hogy a következő héten imádkozzon érted egy konkrét helyzetért vagy személyért, akivel kapcsolatban félsz megszólalni.</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <div class="ige-box">
-      <p class="ige-hely">&#128214; János 15:18–21</p>
-      
-      <p class="ige-szoveg">&#8222;Ha gyűlöl titeket a világ, tudjátok meg, hogy engem előbb gyűlölt nálatok. Ha e világból valók volnátok, a világ szeretné a magáét; de mivel nem vagytok e világból valók, hanem én választottalak ki titeket e világból, azért gyűlöl titeket a világ. Emlékezzetek arra az igére, amelyet én mondtam nektek: Nem nagyobb a szolga az ő uránál. Ha engem üldöztek, titeket is üldöznek majd; ha az én igémet megtartották, a tieteket is megtartják majd. Mindezeket az én nevemért cselekszik veletek, mert nem ismerik azt, aki engem elküldött.&#8221;</p>
-      
-    </div>
-    
-
-    <details>
-      <summary>&#128214; Igehely-tanulmányozás</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Mit mond Jézus ebben a szakaszban az elutasítás eredetéről – és ez hogyan helyezi más megvilágításba, ha valaki hidegen fogadja az evangéliumot?</li><li>Mit jelent számodra személyesen az, hogy Jézus »kiválasztott téged e világból«? Ez inkább megbátorít, vagy inkább nyomaszt?</li><li>Hogyan változna a hozzáállásod az evangelizációhoz, ha az elutasítást nem kudarcként, hanem Jézus szavainak beteljesedéseként értelmeznéd?</li>
-        </ul>
-      </div>
-    </details>
-
-    <details>
-      <summary>&#9995; Alkalmazás – hogyan?</summary>
-      <div class="section-body">
-        <ul class="q-list" role="list">
-        <li>Van-e most egy konkrét személy az életedben, akivel kapcsolatban érzed, hogy Isten már régóta »kopogtat«? Mi lenne a legkisebb, de valódi lépés, amit ezen a héten megtehetsz felé?</li><li>Fogalmazz meg magadnak egy mondatot arról, miért fontos neked Jézus – olyan egyszerűen, hogy azt holnap el tudnád mondani egy barátodnak, ha megkérdezné. Írd le, és hozd el legközelebb.</li><li>Kérj meg valakit ebből a csoportból, hogy a következő héten imádkozzon érted egy konkrét helyzetért vagy személyért, akivel kapcsolatban félsz megszólalni.</li>
-        </ul>
-      </div>
-    </details>
-
-    
-    <details class="qa-details">
-      <summary>Minőségi szempontok</summary>
-      <div class="section-body">
-        <div class="qa-grid">
-          <div class="qa-item"><span class="qa-label">Relevancia</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Eredetiség</span><span class="qa-bar"><span class="qa-fill" style="width:80%"></span></span><span class="qa-num">8</span></div>
-          <div class="qa-item"><span class="qa-label">Magyar szöveg</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Alkalmazhatóság</span><span class="qa-bar"><span class="qa-fill" style="width:90%"></span></span><span class="qa-num">9</span></div>
-          <div class="qa-item"><span class="qa-label">Sokszínűség</span><span class="qa-bar"><span class="qa-fill" style="width:50%"></span></span><span class="qa-num">5</span></div>
+    <div class="card-body">
+      <details open>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Bevezető
+        </summary>
+        <div class="sec-body"><p class="prose">Valljuk be őszintén: az evangelizáció szó sokunkban szorongást kelt. Nem azért, mert nem hisszük, hogy fontos – hanem mert nagyon is tudjuk, hogy az. Mit fog gondolni rólam? Mi lesz, ha visszautasít? Mi lesz a kapcsolatunkkal? Ezek nem hitetlenségből fakadó kérdések, hanem nagyon is emberi félelmek. Ez az alkalom nem arról szól, hogy »kellene már végre evangelizálni«, hanem arról, hogy együtt nézzük meg: mitől félünk valójában, és ez a félelem mit árul el rólunk – meg az evangéliumhoz való viszonyunkról. Jó lesz bátraknak és bátortalanoknak egyaránt.</p></div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Vázlatpontok
+        </summary>
+        <div class="sec-body">
+          <ul class="v-list"><li>1. A félelem valós – és nem szégyen: miért ver a szívünk, amikor Jézusról kellene szólni?</li><li>2. Önvédelem vagy evangélium? – Az elutasítástól való félelem gyökerei, és amit ez elárul elvárásainkról.</li><li>3. Kinek a munkája az evangelizáció? – Az azonnali megtérés mítosza és a reális várakozás fontossága.</li><li>4. Egy konkrét helyzet elemzése: mit teszünk, amikor hirtelen lehetőség adódik – és mi szokott bennünket ilyenkor megakasztani?</li></ul>
         </div>
-        <p style="font-size:.72rem;color:var(--text-muted);margin-top:.4rem">&#9998; AI által javított kérdések</p>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Témafeldolgozó kérdések
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Volt-e olyan helyzet az életedben, amikor érezted, hogy most szólhatnál Jézusról valakinek – de mégsem tettél? Mi tartott vissza pontosan?</li><li>Ha őszinte vagy magaddal: az evangelizációtól való félelmeidben mennyi szól a másik emberről, és mennyi arról, hogy te hogyan nézel ki a szemében?</li><li>Megváltoztatna-e valamit benned, ha komolyan elhinnéd, hogy nem a te feladatod meggyőzni valakit – csak elmondani? Miért igen, vagy miért nem?</li><li>Ismer-e valaki a közvetlen környezetedben téged úgy, hogy tudja: Jézus fontos számodra? Ha nem – mi az oka?</li><li>Milyen elvárást hordozol az evangelizációval kapcsolatban, ami talán nem is bibliai, mégis nyomást helyez rád?</li><li>Elképzelhető-e, hogy a félelmünk az evangelizációtól néha valójában indokolt visszafogottság – amikor a másik ember szempontjait, helyzetét vesszük figyelembe? Hol a határ az egészséges érzékenység és az önfelmentés között?</li><li>Van-e olyan élményed, amikor valaki erőltetetten vagy tapintatlanul evangelizált téged vagy mást – és ez inkább eltávolított Istentől, mint közelebb vitt? Mit tanulsz ebből a saját megközelítésedre nézve?</li><li>Van-e most egy konkrét személy az életedben, akivel kapcsolatban érzed, hogy Isten már régóta »kopogtat«? Mi lenne a legkisebb, de valódi lépés, amit ezen a héten megtehetsz felé?</li><li>Fogalmazz meg magadnak egy mondatot arról, miért fontos neked Jézus – olyan egyszerűen, hogy azt holnap el tudnád mondani egy barátodnak, ha megkérdezné. Írd le, és hozd el legközelebb.</li><li>Kérj meg valakit ebből a csoportból, hogy a következő héten imádkozzon érted egy konkrét helyzetért vagy személyért, akivel kapcsolatban félsz megszólalni.</li></ul>
+        </div>
+      </details>
+      
+      <div class="ige-box" style="margin:0.35rem 0">
+        <div class="ige-ref">&#128214; János 15:18–21</div>
+        
+        <div class="ige-text">&#8222;Ha gyűlöl titeket a világ, tudjátok meg, hogy engem előbb gyűlölt nálatok. Ha e világból valók volnátok, a világ szeretné a magáét; de mivel nem vagytok e világból valók, hanem én választottalak ki titeket e világból, azért gyűlöl titeket a világ. Emlékezzetek arra az igére, amelyet én mondtam nektek: Nem nagyobb a szolga az ő uránál. Ha engem üldöztek, titeket is üldöznek majd; ha az én igémet megtartották, a tieteket is megtartják majd. Mindezeket az én nevemért cselekszik veletek, mert nem ismerik azt, aki engem elküldött.&#8221;</div>
+        
       </div>
-    </details>
-    
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Igehely-tanulmányozás
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Mit mond Jézus ebben a szakaszban az elutasítás eredetéről – és ez hogyan helyezi más megvilágításba, ha valaki hidegen fogadja az evangéliumot?</li><li>Mit jelent számodra személyesen az, hogy Jézus »kiválasztott téged e világból«? Ez inkább megbátorít, vagy inkább nyomaszt?</li><li>Hogyan változna a hozzáállásod az evangelizációhoz, ha az elutasítást nem kudarcként, hanem Jézus szavainak beteljesedéseként értelmeznéd?</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Alkalmazás – hogyan?
+        </summary>
+        <div class="sec-body">
+          <ul class="q-list"><li>Van-e most egy konkrét személy az életedben, akivel kapcsolatban érzed, hogy Isten már régóta »kopogtat«? Mi lenne a legkisebb, de valódi lépés, amit ezen a héten megtehetsz felé?</li><li>Fogalmazz meg magadnak egy mondatot arról, miért fontos neked Jézus – olyan egyszerűen, hogy azt holnap el tudnád mondani egy barátodnak, ha megkérdezné. Írd le, és hozd el legközelebb.</li><li>Kérj meg valakit ebből a csoportból, hogy a következő héten imádkozzon érted egy konkrét helyzetért vagy személyért, akivel kapcsolatban félsz megszólalni.</li></ul>
+        </div>
+      </details>
+      
+      <details>
+        <summary>
+          <svg class="arr" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4,2 8,6 4,10"/></svg>
+          Minőségi szempontok
+        </summary>
+        <div class="sec-body">
+          <div class="qa-grid">
+            <div class="qa-row"><span class="qa-lbl">Relevancia</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Eredetiség</span><div class="qa-track"><div class="qa-fill" style="width:80%"></div></div><span class="qa-num">8</span></div>
+            <div class="qa-row"><span class="qa-lbl">Magyar szöveg</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Alkalmazhatóság</span><div class="qa-track"><div class="qa-fill" style="width:90%"></div></div><span class="qa-num">9</span></div>
+            <div class="qa-row"><span class="qa-lbl">Sokszínűség</span><div class="qa-track"><div class="qa-fill" style="width:50%"></div></div><span class="qa-num">5</span></div>
+          </div>
+          <p style="font-size:.67rem;color:var(--text3);margin-top:.4rem">&#9998; AI által javított</p>
+        </div>
+      </details>
+      
+    </div>
 
-    <p class="forras-link"><a href="https://www.thegospelcoalition.org/article/afraid-evangelism-try-this/" target="_blank" rel="noopener"
-       aria-label="Eredeti forrás: Félek az evangelizációtól – és ez rendben van?">Eredeti forrás &#8599;</a></p>
-
+    <div class="card-foot">
+      <a class="src-link" href="https://www.thegospelcoalition.org/article/afraid-evangelism-try-this/" target="_blank" rel="noopener">
+        Eredeti forrás
+        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7"/><path d="M8 1h3v3"/><line x1="11" y1="1" x2="5.5" y2="6.5"/></svg>
+      </a>
+      
+      <span class="lekt">&#9998; lektorált</span>
+      
+    </div>
   </article>
-
-</main>
+  
+  </div>
+</div>
 
 <footer>
-  Automatikusan generált tartalom &middot;
-  <a href="https://github.com/csarnold8011/hazicsoport-otletek">GitHub</a>
+  <span>Automatikusan generált &middot; <a href="https://github.com/csarnold8011/hazicsoport-otletek">GitHub</a></span>
+  <span>2026-05-02</span>
 </footer>
 
 <script>
-  const btn = document.getElementById('theme-toggle');
-  function applyTheme(dark) {
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-    btn.textContent = dark ? '☀️ Világos' : '🌙 Sötét';
-    btn.setAttribute('aria-label', dark ? 'Váltás világos módra' : 'Váltás sötét módra');
-  }
-  function toggleTheme() {
-    const dark = document.documentElement.getAttribute('data-theme') !== 'dark';
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-    applyTheme(dark);
-  }
-  const saved = localStorage.getItem('theme');
-  applyTheme(saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+var activeTag='mind', activeSrc='mind', activeSort='score';
 
-  let activeTag = 'mind', activeSource = 'mind', activeSort = 'score';
-
-  function filterTag(tag) {
-    activeTag = tag;
-    document.querySelectorAll('.controls-row:nth-child(2) .filter-btn').forEach(b => {
-      const active = (tag === 'mind' && b.textContent.trim() === 'Mind') || b.textContent.trim() === tag;
-      b.classList.toggle('active', active); b.setAttribute('aria-pressed', active);
-    });
-    applyAll();
+function toggleTheme(){
+  var d=document.documentElement;
+  var dark=d.getAttribute('data-theme')!=='dark';
+  d.setAttribute('data-theme',dark?'dark':'light');
+  localStorage.setItem('hc-theme',dark?'dark':'light');
+  document.getElementById('theme-btn').textContent=dark?'☀️ Világos':'☽ Sötét';
+}
+(function(){
+  var s=localStorage.getItem('hc-theme');
+  if(s){
+    document.documentElement.setAttribute('data-theme',s);
+    document.getElementById('theme-btn').textContent=s==='dark'?'☀️ Világos':'☽ Sötét';
   }
+})();
 
-  function filterSource(src) {
-    activeSource = src;
-    document.querySelectorAll('.controls-row:nth-child(3) .filter-btn').forEach(b => {
-      const active = (src === 'mind' && b.textContent.trim() === 'Mind') || b.textContent.trim() === src;
-      b.classList.toggle('active', active); b.setAttribute('aria-pressed', active);
-    });
-    applyAll();
-  }
+function toggleInfo(){
+  document.getElementById('info-panel').classList.toggle('open');
+}
 
-  function sortCards(by) {
-    activeSort = by;
-    document.querySelectorAll('.sort-btn').forEach(b => {
-      const active = b.id === 'sort-' + by;
-      b.classList.toggle('active', active); b.setAttribute('aria-pressed', active);
-    });
-    applyAll();
-  }
+function setTag(t){
+  activeTag=t;
+  document.querySelectorAll('#tag-row .chip').forEach(function(b){
+    b.classList.toggle('active',b.dataset.tag===t);
+  });
+  applyAll();
+}
+function setSrc(s){
+  activeSrc=s;
+  document.querySelectorAll('#src-row .chip').forEach(function(b){
+    b.classList.toggle('active',b.dataset.src===s);
+  });
+  applyAll();
+}
+function setSort(s){
+  activeSort=s;
+  ['score','date'].forEach(function(k){
+    var b=document.getElementById('sort-'+k);
+    if(b) b.style.borderColor=k===s?'var(--accent)':'';
+    if(b) b.style.color=k===s?'var(--accent)':'';
+  });
+  applyAll();
+}
 
-  function applyAll() {
-    const grid = document.getElementById('card-grid');
-    const cards = [...grid.querySelectorAll('.card')];
-    const q = document.getElementById('search-box').value.toLowerCase().trim();
-    cards.forEach(c => {
-      const tagOk    = activeTag    === 'mind' || (c.dataset.tags   || '').includes(activeTag.toLowerCase());
-      const srcOk    = activeSource === 'mind' || c.dataset.forras  === activeSource;
-      const searchOk = !q           || (c.dataset.search || '').includes(q);
-      c.style.display = (tagOk && srcOk && searchOk) ? '' : 'none';
-    });
-    const visible = cards.filter(c => c.style.display !== 'none');
-    visible.sort((a, b) => activeSort === 'score'
-      ? parseFloat(b.dataset.score || 0) - parseFloat(a.dataset.score || 0)
-      : (b.dataset.date || '').localeCompare(a.dataset.date || ''));
-    visible.forEach(c => grid.appendChild(c));
-    const empty = grid.querySelector('.empty-state');
-    if (empty) empty.style.display = visible.length ? 'none' : '';
-  }
+function applyAll(){
+  var featured=document.getElementById('featured-card');
+  var grid=document.getElementById('grid');
+  var q=document.getElementById('search').value.toLowerCase().trim();
+  var allCards=[];
+  if(featured) allCards.push(featured);
+  [].forEach.call(grid.querySelectorAll('.card'),function(c){ allCards.push(c); });
+
+  var visible=[];
+  allCards.forEach(function(c){
+    var tagOk=activeTag==='mind'||(c.dataset.tags||'').includes(activeTag.toLowerCase());
+    var srcOk=activeSrc==='mind'||c.dataset.forras===activeSrc;
+    var srchOk=!q||(c.dataset.search||'').includes(q);
+    var show=tagOk&&srcOk&&srchOk;
+    c.style.display=show?'':'none';
+    if(show) visible.push(c);
+  });
+
+  visible.sort(function(a,b){
+    return activeSort==='score'
+      ?parseFloat(b.dataset.score||0)-parseFloat(a.dataset.score||0)
+      :(b.dataset.date||'').localeCompare(a.dataset.date||'');
+  });
+
+  var empty=grid.querySelector('.empty-state');
+  var nonFeatured=visible.filter(function(c){return c!==featured;});
+  nonFeatured.forEach(function(c){ grid.appendChild(c); });
+  if(empty) empty.style.display=nonFeatured.length?'none':'';
+  document.getElementById('visible-count').textContent=visible.length;
+}
 </script>
 </body>
 </html>
